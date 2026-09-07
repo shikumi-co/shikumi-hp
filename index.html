@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>株式会社シクミ｜生成AI導入支援・駐在型AIコンサルティング</title>
-<meta name="description" content="株式会社シクミは、生成AI導入支援・駐在型AIコンサルティングの会社です。AI人材が現場に入り、業務のヒアリングから実装・内製化まで一気通貫。AI研修は人材開発支援助成金に対応。無料簡易診断（オンライン約2時間）受付中。">
-<link rel="canonical" href="https://shikumi-co.jp/">
+<meta name="description" content="面倒だと思ったら、シクミ化。株式会社シクミは、生成AI導入支援・駐在型AIコンサルティングの会社です。AI人材が現場に入り、業務のヒアリングから実装・内製化まで一気通貫。AI研修は人材開発支援助成金に対応。無料簡易診断受付中。">
 <meta property="og:title" content="株式会社シクミ｜生成AI導入支援・駐在型AIコンサルティング">
 <meta property="og:description" content="AIを、御社の仕組みに。使える仕組みと、使える人を、同時に作る。">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://shikumi-co.jp/">
 <meta property="og:url" content="https://shikumi-co.jp/">
 <meta property="og:image" content="https://shikumi-co.jp/icon-512.png">
 <meta property="og:site_name" content="株式会社シクミ">
@@ -65,7 +65,7 @@ button{font-family:inherit;cursor:pointer}
 }
 body.on-fire .logo .txt{color:#fff}
 .btn-pill{
-  display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.08em;
+  display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.08em;white-space:nowrap;
   padding:9px 20px;border:none;border-radius:999px;color:#fff;
   background:var(--orange);transition:filter .25s;
 }
@@ -207,16 +207,13 @@ h2.t{
   opacity:0;pointer-events:none;transition:opacity .5s ease,transform .5s ease;
 }
 .proto-cta.on{opacity:1;pointer-events:auto;transform:translateX(-50%)}
-.btn-gate{
-  display:inline-flex;align-items:center;gap:14px;
-  font-size:clamp(.95rem,2.6vw,1.05rem);font-weight:700;letter-spacing:.1em;
-  padding:17px clamp(24px,4.5vw,38px);border-radius:999px;
-  background:var(--orange);color:#fff;border:none;
-  box-shadow:0 10px 34px rgba(255,74,0,.35);
-  transition:transform .3s,box-shadow .3s;white-space:nowrap;
+.gate-hint{
+  display:inline-flex;align-items:center;gap:12px;white-space:nowrap;
+  font-size:.88rem;font-weight:700;letter-spacing:.12em;color:var(--ink);
 }
-.btn-gate:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(255,74,0,.55)}
-.btn-gate .mono{font-family:var(--font-mono);font-weight:400;font-size:.6rem;letter-spacing:.24em;opacity:.85}
+.gate-hint .mono{font-family:var(--font-mono);font-weight:400;font-size:.6rem;letter-spacing:.24em;color:var(--muted)}
+.gate-hint .arr{color:var(--orange);animation:hintDown 1.4s ease infinite}
+@keyframes hintDown{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 .proto-hud{
   position:absolute;top:calc(64px + env(safe-area-inset-top));right:var(--pad);z-index:3;
   font-family:var(--font-mono);font-size:.6rem;letter-spacing:.22em;color:var(--muted);text-align:right;
@@ -268,26 +265,22 @@ h2.t{
 .philo-state .thin{opacity:.62}
 #spiralWrap{position:absolute;right:-6%;bottom:-16%;width:clamp(240px,36vw,460px);opacity:.5;pointer-events:none}
 #spiral path{stroke:#fff;stroke-width:1.6;fill:none}
-.jisho{
-  margin-top:clamp(28px,5vh,48px);max-width:430px;
-  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);
-  padding:18px 22px;position:relative;
-}
-.jisho .yomi{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.26em;margin-bottom:6px;color:rgba(255,255,255,.85)}
-.jisho .imi{font-size:.85rem;line-height:1.9}
 .philo-mission{
   margin-top:clamp(22px,4vh,36px);
   font-family:var(--font-mono);font-size:.66rem;letter-spacing:.28em;color:rgba(255,255,255,.9);
 }
 
 /* ============ scene 03: problem ============ */
-.cards{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.cards{display:grid;gap:clamp(22px,3.4vw,44px)}
 @media (min-width:820px){.cards{grid-template-columns:repeat(3,1fr)}}
-.card{background:#fff;padding:clamp(20px,3vw,36px)}
+.card{
+  background:none;
+  padding:clamp(18px,2.6vw,28px) 0 0;
+  border-top:1px solid rgba(42,34,26,.45);
+}
 .card .num{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.2em;color:var(--orange-deep);display:block;margin-bottom:14px}
 .card h3{font-size:1.04rem;font-weight:700;line-height:1.5;margin-bottom:10px;letter-spacing:.02em}
 .card p{font-size:.84rem;color:var(--muted)}
-.card:hover{background:var(--cream)}
 .pivot{
   margin-top:clamp(28px,5vh,48px);text-align:center;
   font-size:clamp(1.3rem,4.4vw,2.4rem);font-weight:800;line-height:1.5;letter-spacing:.02em;
@@ -297,7 +290,10 @@ h2.t{
 /* ============ scene 04: service ============ */
 .svc{display:grid;gap:clamp(14px,2vw,22px)}
 @media (min-width:880px){.svc{grid-template-columns:1fr 1fr}}
-.svc-card{background:#fff;border:1px solid var(--line-dark);padding:clamp(22px,3.4vw,40px)}
+.svc-card{
+  background:var(--dark2);padding:clamp(22px,3.4vw,40px);
+  border-radius:22px;
+}
 .svc-card .num{font-family:var(--font-mono);color:var(--orange-deep);font-size:.68rem;letter-spacing:.24em;display:block;margin-bottom:16px}
 .svc-card h3{font-size:clamp(1.15rem,2.8vw,1.5rem);font-weight:800;line-height:1.4;margin-bottom:12px}
 .svc-card p{color:var(--muted-dark);font-size:.86rem;margin-bottom:18px}
@@ -306,9 +302,13 @@ h2.t{
   font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;color:var(--ink-dark);
   border:1px solid var(--line-dark);padding:5px 11px;border-radius:999px;background:var(--cream);
 }
-.how{margin-top:clamp(20px,3.5vh,36px);display:grid;gap:1px;background:var(--line-dark);border:1px solid var(--line-dark)}
+.how{margin-top:clamp(26px,4.5vh,44px);display:grid;gap:clamp(22px,3.4vw,44px)}
 @media (min-width:820px){.how{grid-template-columns:repeat(3,1fr)}}
-.how .step{background:#fff;padding:clamp(16px,2.4vw,26px)}
+.how .step{
+  background:none;
+  padding:clamp(16px,2.4vw,26px) 0 0;
+  border-top:1px solid rgba(42,34,26,.45);
+}
 .how .step .k{font-size:clamp(1.15rem,2.8vw,1.6rem);font-weight:800;display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
 .how .step .k .idx{font-family:var(--font-mono);font-size:.62rem;color:var(--orange-deep);letter-spacing:.2em}
 .how .step p{font-size:.8rem;color:var(--muted-dark)}
@@ -334,7 +334,10 @@ h2.t{
 /* ============ scene 06: company ============ */
 .co-grid{display:grid;gap:clamp(16px,2.6vw,32px)}
 @media (min-width:960px){.co-grid{grid-template-columns:5fr 7fr;align-items:start}}
-.mission-card{background:#fff;border:1px solid var(--line-dark);padding:clamp(22px,3.2vw,36px)}
+.mission-card{
+  background:var(--dark2);padding:clamp(22px,3.2vw,36px);
+  border-radius:22px;
+}
 .mission-card .label{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.3em;color:var(--orange-deep);margin-bottom:14px}
 .mission-card p.big{font-size:clamp(1.15rem,2.8vw,1.5rem);font-weight:800;line-height:1.7;margin-bottom:12px}
 .mission-card p.small{font-size:.82rem;color:var(--muted-dark)}
@@ -387,75 +390,151 @@ h2.t{
   font-family:var(--font-mono);font-size:.66rem;letter-spacing:.3em;color:#fff;opacity:.9;
   display:flex;flex-direction:column;align-items:center;gap:16px;
 }
-#doors.closing .door{visibility:visible;animation:doorClose .55s cubic-bezier(.7,0,.3,1) forwards}
+#doors.closing .door{visibility:visible;animation:doorClose .4s cubic-bezier(.7,0,.3,1) forwards}
 #doors.opening .door{visibility:visible}
-#doors.opening .door.L{animation:doorOpenL .9s cubic-bezier(.6,0,.2,1) forwards}
-#doors.opening .door.R{animation:doorOpenR .9s cubic-bezier(.6,0,.2,1) forwards}
+#doors.opening .door.L{animation:doorOpenL .6s cubic-bezier(.6,0,.2,1) forwards}
+#doors.opening .door.R{animation:doorOpenR .6s cubic-bezier(.6,0,.2,1) forwards}
 @keyframes doorClose{to{transform:translateX(0)}}
 @keyframes doorOpenL{0%{transform:translateX(0) rotateY(0)}100%{transform:translateX(-6%) rotateY(-100deg);opacity:.9}}
 @keyframes doorOpenR{0%{transform:translateX(0) rotateY(0)}100%{transform:translateX(6%) rotateY(100deg);opacity:.9}}
 
 /* ============ transitions ============ */
-.t-push-out{animation:pushOut .85s cubic-bezier(.7,0,.2,1) forwards}
-.t-push-in{animation:pushIn .85s cubic-bezier(.7,0,.2,1) forwards;z-index:3}
+.t-push-out{animation:pushOut .55s cubic-bezier(.7,0,.2,1) forwards}
+.t-push-in{animation:pushIn .55s cubic-bezier(.7,0,.2,1) forwards;z-index:3}
 @keyframes pushOut{to{transform:translateX(-32%) scale(.96);filter:brightness(.92)}}
 @keyframes pushIn{from{transform:translateX(100%)}to{transform:translateX(0)}}
-.t-push-out-rev{animation:pushOutR .85s cubic-bezier(.7,0,.2,1) forwards}
-.t-push-in-rev{animation:pushInR .85s cubic-bezier(.7,0,.2,1) forwards;z-index:3}
+.t-push-out-rev{animation:pushOutR .55s cubic-bezier(.7,0,.2,1) forwards}
+.t-push-in-rev{animation:pushInR .55s cubic-bezier(.7,0,.2,1) forwards;z-index:3}
 @keyframes pushOutR{to{transform:translateX(32%) scale(.96);filter:brightness(.92)}}
 @keyframes pushInR{from{transform:translateX(-100%)}to{transform:translateX(0)}}
 
-.t-shutter-out{animation:shutOut .8s cubic-bezier(.7,0,.2,1) forwards;z-index:3}
-.t-shutter-in{animation:shutIn .8s cubic-bezier(.55,.05,.3,1) forwards}
+.t-shutter-out{animation:shutOut .5s cubic-bezier(.7,0,.2,1) forwards;z-index:3}
+.t-shutter-in{animation:shutIn .5s cubic-bezier(.55,.05,.3,1) forwards}
 @keyframes shutOut{to{transform:translateY(-102%)}}
 @keyframes shutIn{from{transform:translateY(9%) scale(.985);opacity:.6}to{transform:none;opacity:1}}
-.t-shutter-out-rev{animation:shutOutR .8s cubic-bezier(.7,0,.2,1) forwards}
-.t-shutter-in-rev{animation:shutInR .8s cubic-bezier(.55,.05,.3,1) forwards;z-index:3}
+.t-shutter-out-rev{animation:shutOutR .5s cubic-bezier(.7,0,.2,1) forwards}
+.t-shutter-in-rev{animation:shutInR .5s cubic-bezier(.55,.05,.3,1) forwards;z-index:3}
 @keyframes shutOutR{to{transform:translateY(6%) scale(.985);opacity:.5}}
 @keyframes shutInR{from{transform:translateY(-102%)}to{transform:translateY(0)}}
 
-.t-warp-out{animation:warpOut .9s cubic-bezier(.7,0,.3,1) forwards;z-index:3}
-.t-warp-in{animation:warpIn .9s cubic-bezier(.3,.6,.2,1) forwards}
+.t-warp-out{animation:warpOut .55s cubic-bezier(.7,0,.3,1) forwards;z-index:3}
+.t-warp-in{animation:warpIn .55s cubic-bezier(.3,.6,.2,1) forwards}
 @keyframes warpOut{to{transform:scale(1.7);opacity:0;filter:blur(14px)}}
 @keyframes warpIn{from{transform:scale(.82);opacity:0;filter:blur(6px)}60%{opacity:1}to{transform:none;opacity:1;filter:blur(0)}}
-.t-warp-out-rev{animation:warpOutR .9s cubic-bezier(.7,0,.3,1) forwards}
-.t-warp-in-rev{animation:warpInR .9s cubic-bezier(.3,.6,.2,1) forwards;z-index:3}
+.t-warp-out-rev{animation:warpOutR .55s cubic-bezier(.7,0,.3,1) forwards}
+.t-warp-in-rev{animation:warpInR .55s cubic-bezier(.3,.6,.2,1) forwards;z-index:3}
 @keyframes warpOutR{to{transform:scale(.82);opacity:0;filter:blur(6px)}}
 @keyframes warpInR{from{transform:scale(1.7);opacity:0;filter:blur(14px)}60%{opacity:1}to{transform:none;opacity:1;filter:blur(0)}}
 
-.t-flip-out{animation:flipOut .9s cubic-bezier(.6,0,.3,1) forwards;transform-origin:20% center}
-.t-flip-in{animation:flipIn .9s cubic-bezier(.5,.05,.2,1) forwards;z-index:3;transform-origin:80% center}
+.t-flip-out{animation:flipOut .55s cubic-bezier(.6,0,.3,1) forwards;transform-origin:20% center}
+.t-flip-in{animation:flipIn .55s cubic-bezier(.5,.05,.2,1) forwards;z-index:3;transform-origin:80% center}
 @keyframes flipOut{to{transform:rotateY(-70deg) translateX(-24%);opacity:0}}
 @keyframes flipIn{from{transform:rotateY(55deg) translateX(24%);opacity:0}55%{opacity:1}to{transform:none;opacity:1}}
-.t-flip-out-rev{animation:flipOutR .9s cubic-bezier(.6,0,.3,1) forwards;transform-origin:80% center}
-.t-flip-in-rev{animation:flipInR .9s cubic-bezier(.5,.05,.2,1) forwards;z-index:3;transform-origin:20% center}
+.t-flip-out-rev{animation:flipOutR .55s cubic-bezier(.6,0,.3,1) forwards;transform-origin:80% center}
+.t-flip-in-rev{animation:flipInR .55s cubic-bezier(.5,.05,.2,1) forwards;z-index:3;transform-origin:20% center}
 @keyframes flipOutR{to{transform:rotateY(70deg) translateX(24%);opacity:0}}
 @keyframes flipInR{from{transform:rotateY(-55deg) translateX(-24%);opacity:0}55%{opacity:1}to{transform:none;opacity:1}}
 
-.t-lift-out{animation:liftOut .85s cubic-bezier(.65,0,.25,1) forwards}
-.t-lift-in{animation:liftIn .85s cubic-bezier(.65,0,.25,1) forwards;z-index:3}
+.t-lift-out{animation:liftOut .55s cubic-bezier(.65,0,.25,1) forwards}
+.t-lift-in{animation:liftIn .55s cubic-bezier(.65,0,.25,1) forwards;z-index:3}
 @keyframes liftOut{to{transform:translateY(-30%) scale(.97);filter:brightness(.92)}}
 @keyframes liftIn{from{transform:translateY(100%)}to{transform:translateY(0)}}
-.t-lift-out-rev{animation:liftOutR .85s cubic-bezier(.65,0,.25,1) forwards}
-.t-lift-in-rev{animation:liftInR .85s cubic-bezier(.65,0,.25,1) forwards;z-index:3}
+.t-lift-out-rev{animation:liftOutR .55s cubic-bezier(.65,0,.25,1) forwards}
+.t-lift-in-rev{animation:liftInR .55s cubic-bezier(.65,0,.25,1) forwards;z-index:3}
 @keyframes liftOutR{to{transform:translateY(30%) scale(.97);filter:brightness(.92)}}
 @keyframes liftInR{from{transform:translateY(-100%)}to{transform:translateY(0)}}
 
-.t-iris-out{animation:irisDim .95s ease forwards}
-.t-iris-in{animation:irisIn .95s cubic-bezier(.6,0,.25,1) forwards;z-index:4}
+.t-iris-out{animation:irisDim .6s ease forwards}
+.t-iris-in{animation:irisIn .6s cubic-bezier(.6,0,.25,1) forwards;z-index:4}
 @keyframes irisDim{to{filter:brightness(.9)}}
 @keyframes irisIn{from{clip-path:circle(0% at 50% 62%)}to{clip-path:circle(142% at 50% 62%)}}
-.t-iris-out-rev{animation:irisOutRev .95s cubic-bezier(.6,0,.25,1) forwards;z-index:4}
-.t-iris-in-rev{animation:irisDimIn .95s ease forwards}
+.t-iris-out-rev{animation:irisOutRev .6s cubic-bezier(.6,0,.25,1) forwards;z-index:4}
+.t-iris-in-rev{animation:irisDimIn .6s ease forwards}
 @keyframes irisOutRev{from{clip-path:circle(142% at 50% 62%)}to{clip-path:circle(0% at 50% 62%)}}
 @keyframes irisDimIn{from{filter:brightness(.9)}to{filter:brightness(1)}}
 
-.t-fade-out{animation:fadeOut .5s ease forwards}
-.t-fade-in{animation:fadeIn .5s ease forwards;z-index:3}
+.t-fade-out{animation:fadeOut .35s ease forwards}
+.t-fade-in{animation:fadeIn .35s ease forwards;z-index:3}
 @keyframes fadeOut{to{opacity:0}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 
 a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+
+/* ============ index menu ============ */
+.h-right{display:flex;align-items:center;gap:10px}
+.h-right a,.h-right button{pointer-events:auto}
+.menu-btn{
+  display:inline-flex;align-items:center;gap:9px;white-space:nowrap;
+  font-size:.8rem;font-weight:700;letter-spacing:.12em;
+  padding:8px 16px;border:1.5px solid rgba(42,34,26,.35);border-radius:999px;
+  background:transparent;color:var(--ink);
+  transition:color .3s,border-color .3s;
+}
+.menu-btn .bars{display:inline-flex;flex-direction:column;gap:3px}
+.menu-btn .bars i{display:block;width:14px;height:2px;background:currentColor;border-radius:2px}
+.menu-btn:hover,.menu-btn:focus-visible{border-color:var(--orange);color:var(--orange)}
+body.on-fire .menu-btn{color:#fff;border-color:rgba(255,255,255,.5)}
+body.on-fire .menu-btn:hover,body.on-fire .menu-btn:focus-visible{border-color:#fff}
+#menu{
+  position:fixed;inset:0;z-index:120;background:var(--dark);
+  display:flex;flex-direction:column;
+  padding:calc(14px + env(safe-area-inset-top)) var(--pad) 32px;
+  opacity:0;visibility:hidden;
+  transition:opacity .35s ease,visibility 0s linear .35s;
+  overflow-y:auto;overscroll-behavior:contain;
+}
+#menu::before{content:"";position:fixed;top:0;left:0;right:0;height:3px;background:var(--orange)}
+body.menu-open #menu{opacity:1;visibility:visible;transition:opacity .35s ease}
+.m-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:clamp(18px,4.5vh,46px)}
+.m-eyebrow{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.26em;color:var(--muted)}
+.m-close{
+  font-size:.8rem;font-weight:700;letter-spacing:.1em;white-space:nowrap;flex:none;
+  padding:8px 16px;border:1.5px solid rgba(42,34,26,.35);border-radius:999px;
+  background:transparent;color:var(--ink);transition:color .3s,border-color .3s;
+}
+.m-close:hover,.m-close:focus-visible{border-color:var(--orange);color:var(--orange)}
+.m-list{list-style:none;width:100%;max-width:var(--max);margin:0 auto}
+.m-list li{opacity:0;transform:translateY(14px);transition:opacity .4s ease,transform .4s ease}
+body.menu-open .m-list li{opacity:1;transform:none}
+body.menu-open .m-list li:nth-child(1){transition-delay:.04s}
+body.menu-open .m-list li:nth-child(2){transition-delay:.08s}
+body.menu-open .m-list li:nth-child(3){transition-delay:.12s}
+body.menu-open .m-list li:nth-child(4){transition-delay:.16s}
+body.menu-open .m-list li:nth-child(5){transition-delay:.20s}
+body.menu-open .m-list li:nth-child(6){transition-delay:.24s}
+body.menu-open .m-list li:nth-child(7){transition-delay:.28s}
+.m-list a{
+  position:relative;z-index:0;overflow:hidden;
+  display:grid;grid-template-columns:3.4rem 1fr auto;align-items:baseline;gap:14px;
+  padding:clamp(13px,2.6vh,22px) clamp(10px,2vw,18px);
+  border-bottom:1px solid var(--line);transition:color .25s;
+}
+.m-list li:first-child a{border-top:1px solid var(--line)}
+.m-list a::before{
+  content:"";position:absolute;inset:0;z-index:-1;background:var(--orange);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .3s cubic-bezier(.7,0,.2,1);
+}
+.m-list a:hover,.m-list a:focus-visible{color:#fff}
+.m-list a:hover::before,.m-list a:focus-visible::before{transform:scaleX(1)}
+.m-num{font-family:var(--font-mono);font-size:.8rem;font-weight:700;letter-spacing:.08em;color:var(--orange);transition:color .25s}
+.m-list a:hover .m-num,.m-list a:focus-visible .m-num{color:#fff}
+.m-jp{font-size:clamp(1.05rem,2.4vw,1.55rem);font-weight:800;letter-spacing:.04em;line-height:1.35}
+.m-en{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.24em;color:var(--muted);transition:color .25s}
+.m-list a:hover .m-en,.m-list a:focus-visible .m-en{color:rgba(255,255,255,.85)}
+.m-here{
+  display:none;vertical-align:middle;margin-left:12px;
+  font-family:var(--font-mono);font-size:.62rem;font-weight:700;letter-spacing:.14em;
+  color:var(--orange);border:1px solid currentColor;border-radius:999px;
+  padding:2px 9px;transform:translateY(-2px);
+}
+.m-list li.here .m-here{display:inline-block}
+.m-list a:hover .m-here,.m-list a:focus-visible .m-here{color:#fff}
+@media (max-width:640px){
+  .menu-btn{padding:8px 12px}
+  .m-list a{grid-template-columns:2.4rem 1fr;gap:10px}
+  .m-en{display:none}
+}
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -470,22 +549,40 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-off
 
 <header class="header">
   <a class="logo" href="#" id="homeLink" aria-label="シクミ 最初のシーンへ">
-    <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true">
-      <path fill="#FB5B31" d="M15 6 L54 6 L41 19 L21 19 L21 25.5 L35.5 25.5 L22.5 38.5 L15 38.5 L8 31.5 L8 13 Z"/>
-      <path fill="#FB5B31" d="M49 58 L10 58 L23 45 L43 45 L43 38.5 L28.5 38.5 L41.5 25.5 L49 25.5 L56 32.5 L56 51 Z"/>
+    <svg width="26" height="26" viewBox="0 0 200 200" aria-hidden="true">
+      <g fill="none" stroke="#FF4A00" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M 152 28 L 69 28 A 46.5 46.5 0 0 0 69 121 L 115 121"/>
+        <path d="M 79 75 L 132 75 A 47 47 0 0 1 132 169 L 49 169"/>
+      </g>
     </svg>
     <span class="txt">SHIKUMI</span>
   </a>
-  <a class="btn-pill" href="#" id="contactLink">相談する</a>
+  <div class="h-right">
+    <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">
+      <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>MENU
+    </button>
+    <a class="btn-pill" href="#" id="contactLink">相談する</a>
+  </div>
 </header>
+
+<nav id="menu" aria-hidden="true" aria-label="サイト内メニュー">
+  <div class="m-top">
+    <p class="m-eyebrow">INDEX — 見たい場所へ、まっすぐ。</p>
+    <button type="button" class="m-close" id="menuClose" aria-label="メニューを閉じる">✕ 閉じる</button>
+  </div>
+  <ol class="m-list">
+    <li><a href="#origin" data-go="0"><span class="m-num">00</span><span class="m-jp">序章 — 三つの革命<span class="m-here">現在地</span></span><span class="m-en">HISTORY</span></a></li>
+    <li><a href="#hero" data-go="1"><span class="m-num">01</span><span class="m-jp">シクミとは<span class="m-here">現在地</span></span><span class="m-en">TOP</span></a></li>
+    <li><a href="#philosophy" data-go="2"><span class="m-num">02</span><span class="m-jp">理念 — 良いものを、もっと良いものへ<span class="m-here">現在地</span></span><span class="m-en">PHILOSOPHY</span></a></li>
+    <li><a href="#problem" data-go="3"><span class="m-num">03</span><span class="m-jp">AI導入が、止まる理由<span class="m-here">現在地</span></span><span class="m-en">PROBLEM</span></a></li>
+    <li><a href="#service" data-go="4"><span class="m-num">04</span><span class="m-jp">事業内容<span class="m-here">現在地</span></span><span class="m-en">SERVICE</span></a></li>
+    <li><a href="#company" data-go="5"><span class="m-num">05</span><span class="m-jp">会社概要<span class="m-here">現在地</span></span><span class="m-en">COMPANY</span></a></li>
+    <li><a href="#contact" data-go="6"><span class="m-num">06</span><span class="m-jp">お問い合わせ<span class="m-here">現在地</span></span><span class="m-en">CONTACT</span></a></li>
+  </ol>
+</nav>
 
 <p class="place" aria-live="polite"><b id="placeNum">00</b><span id="placeLabel">HISTORY</span></p>
 <div class="dots" id="dots" role="tablist" aria-label="シーン切替"></div>
-<div class="ctrl">
-  <button type="button" id="skipBtn" aria-label="歴史をスキップして本編へ">スキップ ⏭</button>
-  <button type="button" id="prevBtn" aria-label="前のシーンへ">← 戻る</button>
-  <button type="button" id="nextBtn" class="next" aria-label="次のシーンへ">次へ →</button>
-</div>
 
 <div id="stage">
 
@@ -518,9 +615,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-off
           <p class="rev">03 — AI → YOUR SYSTEM</p>
         </div>
         <div class="proto-cta" id="protoCta">
-          <button type="button" class="btn-gate" id="gateBtn">
-            <span>扉を開く</span><span class="mono">— ENTER SHIKUMI</span><span>→</span>
-          </button>
+          <p class="gate-hint"><span class="mono">ENTER SHIKUMI</span><span>そのまま下へ</span><span class="arr">↓</span></p>
         </div>
         <p class="proto-hud">REVOLUTION <b id="revNum">00</b> / 03</p>
       </div>
@@ -535,15 +630,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-off
       <div class="scene-inner">
         <p class="eyebrow">SHIKUMI INC. — AI INTEGRATION</p>
         <h1 class="hero-h1">
-          <i>AIを、</i><br>
-          <i>御社の</i><i><em>仕組み</em>に。</i>
+          <i>面倒だと思ったら、</i><br>
+          <i><em>シクミ化</em>。</i>
         </h1>
-        <p class="hero-sub">株式会社シクミは、非エンジニアの現場にAIを実装する会社です。ツールを売って終わりにしない。自分たちで回せる「仕組み」を残します。</p>
+        <p class="hero-sub">日々の「面倒」は、がんばって耐えるものではなく、仕組みに任せるもの。株式会社シクミは、非エンジニアの現場にAIを実装し、自分たちで回せる「仕組み」を残す会社です。</p>
       </div>
     </div>
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <span class="fire">仕掛ける。</span><span class="ghost">仕込む。</span><span>仕組む。</span><span class="ghost">SHIKUMI</span><span class="fire">仕掛ける。</span><span class="ghost">仕込む。</span><span>仕組む。</span><span class="ghost">SHIKUMI</span>
+        <span>仕掛ける。</span><span class="ghost">仕込む。</span><span>仕組む。</span><span class="fire">シクミ化。</span><span class="ghost">SHIKUMI</span><span>仕掛ける。</span><span class="ghost">仕込む。</span><span>仕組む。</span><span class="fire">シクミ化。</span><span class="ghost">SHIKUMI</span>
       </div>
     </div>
   </section>
@@ -563,10 +658,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-off
           <span class="thin">もっと良いものへ、</span><br>
           昇華させる。
         </p>
-        <div class="jisho fx">
-          <p class="yomi">【昇華】 しょう‐か</p>
-          <p class="imi">物事が、より高い次元のものへ一段と高められること。——私たちの仕事は、御社の強みをこれで包み直すことです。</p>
-        </div>
         <p class="philo-mission fx">MISSION — 使える仕組みと、使える人を、同時に作る。</p>
       </div>
     </div>
@@ -648,7 +739,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-off
           <table class="co-table fx">
             <tbody>
               <tr><th scope="row">COMPANY</th><td>株式会社シクミ（shikumi inc.）</td></tr>
-              <tr><th scope="row">BOARD</th><td>代表取締役　石井 由哉<br>取締役　古川湧一</td></tr>
+              <tr><th scope="row">BOARD</th><td>代表取締役　石井 由哉</td></tr>
               <tr><th scope="row">OFFICE</th><td>東京都渋谷区桜丘町18-4 二宮ビル 1F</td></tr>
               <tr><th scope="row">FOUNDED</th><td>2026年</td></tr>
               <tr><th scope="row">BUSINESS</th><td>AI導入支援（AIコンサルティング／AI研修）<br>ITコンサルティング／システム開発・業務受託</td></tr>
@@ -666,7 +757,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-off
     <div class="scene-scroll">
       <div class="scene-inner">
         <p class="eyebrow fx" style="justify-content:center">06 — CONTACT</p>
-        <h2 class="fx">まず、<br>話しませんか。</h2>
+        <h2 class="fx">その「面倒」、<br>シクミ化しませんか。</h2>
         <p class="sub fx">AI導入のご相談、研修・セミナーのご依頼はメールでどうぞ。<br>1営業日以内にご返信します。</p>
         <p class="fx"><a class="btn-mail" href="mailto:info@shikumi-co.jp">info@shikumi-co.jp<span>→</span></a></p>
         <nav class="fx" aria-label="対応エリア" style="margin-top:40px;font-size:12px;line-height:2.2;opacity:.85;max-width:640px;margin-left:auto;margin-right:auto">
@@ -686,14 +777,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-off
   <div class="door L">
     <span class="seam"></span>
     <span class="glabel">
-      <svg width="34" height="34" viewBox="0 0 64 64"><path fill="#fff" d="M15 6 L54 6 L41 19 L21 19 L21 25.5 L35.5 25.5 L22.5 38.5 L15 38.5 L8 31.5 L8 13 Z"/><path fill="#fff" d="M49 58 L10 58 L23 45 L43 45 L43 38.5 L28.5 38.5 L41.5 25.5 L49 25.5 L56 32.5 L56 51 Z"/></svg>
+      <svg width="34" height="34" viewBox="0 0 200 200"><g fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M 152 28 L 69 28 A 46.5 46.5 0 0 0 69 121 L 115 121"/><path d="M 79 75 L 132 75 A 47 47 0 0 1 132 169 L 49 169"/></g></svg>
       GATE
     </span>
   </div>
   <div class="door R">
     <span class="seam"></span>
     <span class="glabel">
-      <svg width="34" height="34" viewBox="0 0 64 64"><path fill="#fff" d="M15 6 L54 6 L41 19 L21 19 L21 25.5 L35.5 25.5 L22.5 38.5 L15 38.5 L8 31.5 L8 13 Z"/><path fill="#fff" d="M49 58 L10 58 L23 45 L43 45 L43 38.5 L28.5 38.5 L41.5 25.5 L49 25.5 L56 32.5 L56 51 Z"/></svg>
+      <svg width="34" height="34" viewBox="0 0 200 200"><g fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M 152 28 L 69 28 A 46.5 46.5 0 0 0 69 121 L 115 121"/><path d="M 79 75 L 132 75 A 47 47 0 0 1 132 169 L 49 169"/></g></svg>
       2026
     </span>
   </div>
@@ -711,11 +802,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-off
   var progress = document.getElementById("progress");
   var placeNum = document.getElementById("placeNum");
   var placeLabel = document.getElementById("placeLabel");
-  var prevBtn = document.getElementById("prevBtn");
-  var nextBtn = document.getElementById("nextBtn");
-  var skipBtn = document.getElementById("skipBtn");
   var doors = document.getElementById("doors");
-  var DUR = {push:900, shutter:850, warp:950, lift:900, iris:1000, flip:950, fade:550};
+  var DUR = {push:600, shutter:550, warp:600, lift:600, iris:650, flip:600, fade:400};
 
   var dots = document.getElementById("dots");
   scenes.forEach(function(s, i){
@@ -734,16 +822,12 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-off
     placeLabel.textContent = s.getAttribute("data-label");
     progress.style.width = (idx / (N - 1)) * 100 + "%";
     dotBtns.forEach(function(b, i){ b.classList.toggle("on", i === idx); });
-    prevBtn.disabled = idx === 0;
-    nextBtn.disabled = idx === N - 1;
-    skipBtn.style.display = idx === 0 ? "" : "none";
-    prevBtn.style.display = idx === 0 ? "none" : "";
     scenes.forEach(function(sc, i){ sc.setAttribute("aria-hidden", i === idx ? "false" : "true"); });
   }
   function enterFx(scene){
     scene.classList.remove("entered");
     scene.querySelectorAll(".fx").forEach(function(el, i){
-      el.style.transitionDelay = (RM ? 0 : 90 + i * 90) + "ms";
+      el.style.transitionDelay = (RM ? 0 : 60 + i * 50) + "ms";
     });
     requestAnimationFrame(function(){ requestAnimationFrame(function(){ scene.classList.add("entered"); }); });
   }
@@ -778,8 +862,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-off
           doors.classList.remove("opening");
           clearT(nxt);
           afterEnter(nxt); busy = false;
-        }, 950);
-      }, 600);
+        }, 650);
+      }, 450);
       return;
     }
     var suf = back ? "-rev" : "";
@@ -796,14 +880,44 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-off
   function next(){ goTo(idx + 1); }
   function prev(){ goTo(idx - 1); }
 
-  nextBtn.addEventListener("click", function(){ next(); });
-  prevBtn.addEventListener("click", function(){ prev(); });
-  skipBtn.addEventListener("click", function(){ goTo(1, "fade"); });
-  document.getElementById("gateBtn").addEventListener("click", function(){ goTo(1); });
   document.getElementById("homeLink").addEventListener("click", function(e){ e.preventDefault(); goTo(0, "fade"); });
   document.getElementById("contactLink").addEventListener("click", function(e){ e.preventDefault(); goTo(N - 1, "fade"); });
 
+  /* ============ index menu ============ */
+  var menuEl = document.getElementById("menu");
+  var menuBtn = document.getElementById("menuBtn");
+  var menuCloseBtn = document.getElementById("menuClose");
+  var menuItems = Array.prototype.slice.call(menuEl.querySelectorAll("[data-go]"));
+  function isMenuOpen(){ return document.body.classList.contains("menu-open"); }
+  function setMenu(open){
+    document.body.classList.toggle("menu-open", open);
+    menuEl.setAttribute("aria-hidden", open ? "false" : "true");
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    if(open){
+      menuItems.forEach(function(a){
+        a.parentElement.classList.toggle("here", parseInt(a.getAttribute("data-go"), 10) === idx);
+      });
+      menuCloseBtn.focus();
+    }else{
+      menuBtn.focus();
+    }
+  }
+  menuBtn.addEventListener("click", function(){ setMenu(true); });
+  menuCloseBtn.addEventListener("click", function(){ setMenu(false); });
+  menuItems.forEach(function(a){
+    a.addEventListener("click", function(e){
+      e.preventDefault();
+      var to = parseInt(a.getAttribute("data-go"), 10);
+      setMenu(false);
+      goTo(to, "fade");
+    });
+  });
+
   document.addEventListener("keydown", function(e){
+    if(isMenuOpen()){
+      if(e.key === "Escape") setMenu(false);
+      return;
+    }
     if(e.key === "ArrowRight" || e.key === "PageDown"){ e.preventDefault(); next(); }
     else if(e.key === "ArrowLeft" || e.key === "PageUp"){ e.preventDefault(); prev(); }
   });
@@ -811,7 +925,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-off
   var wheelLock = 0;
   window.addEventListener("wheel", function(e){
     var now = Date.now();
-    if(busy || now - wheelLock < 1100) return;
+    if(busy || isMenuOpen() || now - wheelLock < 700) return;
     if(Math.abs(e.deltaY) < 24) return;
     var sc = scenes[idx].querySelector(".scene-scroll");
     if(sc){
@@ -824,18 +938,34 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-off
     if(e.deltaY > 0) next(); else prev();
   }, {passive:true});
 
-  var swX = null, swY = null;
-  window.addEventListener("pointerdown", function(e){
-    if(e.pointerType !== "touch") return;
+  var swX = null, swY = null, swTop = false, swBottom = false;
+  function sceneEdges(){
+    var sc = scenes[idx].querySelector(".scene-scroll");
+    return {
+      top: !sc || sc.scrollTop <= 2,
+      bottom: !sc || sc.scrollTop + sc.clientHeight >= sc.scrollHeight - 2
+    };
+  }
+  window.addEventListener("touchstart", function(e){
     if(e.target && e.target.id === "helix"){ swX = null; return; }
-    swX = e.clientX; swY = e.clientY;
+    var t = e.touches[0];
+    swX = t.clientX; swY = t.clientY;
+    var ed = sceneEdges();
+    swTop = ed.top; swBottom = ed.bottom;
   }, {passive:true});
-  window.addEventListener("pointerup", function(e){
-    if(e.pointerType !== "touch" || swX === null) return;
-    var dx = e.clientX - swX, dy = e.clientY - swY;
+  window.addEventListener("touchend", function(e){
+    if(swX === null || isMenuOpen()) return;
+    var t = e.changedTouches[0];
+    var dx = t.clientX - swX, dy = t.clientY - swY;
     swX = null;
     if(Math.abs(dx) > 64 && Math.abs(dx) > Math.abs(dy) * 1.4){
       if(dx < 0) next(); else prev();
+      return;
+    }
+    var ed = sceneEdges();
+    if(Math.abs(dy) > 40 && Math.abs(dy) > Math.abs(dx) * 1.2){
+      if(dy < 0 && (swBottom || ed.bottom)) next();
+      else if(dy > 0 && (swTop || ed.top)) prev();
     }
   }, {passive:true});
 
