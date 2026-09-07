@@ -314,7 +314,7 @@ def head(title, desc, canonical, ld):
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{BASE}/icon-512.png">
+<meta property="og:image" content="{BASE}/apple-touch-icon.png">
 <meta property="og:site_name" content="株式会社シクミ">
 <link rel="icon" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
