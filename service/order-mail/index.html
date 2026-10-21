@@ -955,7 +955,7 @@
     function esc(x) { return String(x).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
     // 問い合わせフォーム: Apps Script のウェブアプリに送る（未接続のときはメールソフトを開く）
-    var FORM_ENDPOINT = ""; // 公開時に Apps Script のウェブアプリ URL を入れる（docs: オーダーメール 問い合わせフォームの接続手順）
+    var FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbxdXs5pbXIGby2JBAj2usY9XpzMuj5pqOhc06AJ6GKOyjJS2k6StyaF-ON0BHtGJ7okVg/exec"; // 公開時に Apps Script のウェブアプリ URL を入れる（docs: オーダーメール 問い合わせフォームの接続手順）
     var GUIDE_URL = "order-mail-guide.pdf"; // 「3 分で分かるオーダーメール」（同じフォルダに置く）
     var guideLink = '<a href="' + GUIDE_URL + '" target="_blank" rel="noopener">資料「3 分で分かるオーダーメール」を開く（PDF）</a>';
     function wireForm(f) {
