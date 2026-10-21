@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>不動産売買仲介向け オーダーメイドのメール配信「オーダーメール」｜Excel の顧客リストから本人のメールで 1 社 1 通｜株式会社シクミ</title>
+<meta name="description" content="Excel の顧客リストをタグで絞り込み、宛名と一言だけ差し替えた物件紹介メールを、営業本人の Outlook・Gmail から 1 社 1 通ずつ送信。PDF の添付上限や二重送信の排除など、御社の業務に合わせてオーダーメイドで作り込みます。問い合わせから最短当日で利用開始。">
+<link rel="canonical" href="https://shikumi-co.jp/service/order-mail/">
+<meta property="og:title" content="不動産売買仲介向け オーダーメイドのメール配信「オーダーメール」｜Excel の顧客リストから本人のメールで 1 社 1 通｜株式会社シクミ">
+<meta property="og:description" content="Excel の顧客リストをタグで絞り込み、宛名と一言だけ差し替えた物件紹介メールを、営業本人の Outlook・Gmail から 1 社 1 通ずつ送信。PDF の添付上限や二重送信の排除など、御社の業務に合わせてオーダーメイドで作り込みます。問い合わせから最短当日で利用開始。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shikumi-co.jp/service/order-mail/">
+<meta property="og:image" content="https://shikumi-co.jp/service/order-mail/img/og.png">
+<meta property="og:site_name" content="株式会社シクミ">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "オーダーメール", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "url": "https://shikumi-co.jp/service/order-mail/", "description": "Excel の顧客リストをタグで絞り込み、宛名と一言だけ差し替えた物件紹介メールを、営業本人の Outlook・Gmail から 1 社 1 通ずつ送信。PDF の添付上限や二重送信の排除など、御社の業務に合わせてオーダーメイドで作り込みます。問い合わせから最短当日で利用開始。", "provider": {"@type": "Organization", "name": "株式会社シクミ", "url": "https://shikumi-co.jp/"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "JPY", "description": "試験提供は無料。価格はお問い合わせください"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "BCC の一斉送信と何が違いますか", "acceptedAnswer": {"@type": "Answer", "text": "BCC は 1 通のメールを全員に送るので、宛名が入らず、受け取る側には「一斉送信」と分かります。オーダーメールは会社ごとに別のメールを作り、宛名と一言を差し替えて 1 社ずつ送ります。送信済みフォルダにも 1 社ずつ残ります。"}}, {"@type": "Question", "name": "うちの業務に合わせて変えてもらえますか", "acceptedAnswer": {"@type": "Answer", "text": "はい。これまでも「PDF の上限を 10MB に広げる」「タグの振り分けを細かくして重複を排除する」「Gmail に対応する」といった要望に応えてきました。まずは「こんなことはできる？」をお聞かせください。"}}, {"@type": "Question", "name": "タグは決まっていますか", "acceptedAnswer": {"@type": "Answer", "text": "決まっていません。「RC」「木造」「アパート」「区分」「土地」のような種別も、「1億〜3億」「積算80%以上」「千葉県」のような条件も、御社の業務フローに合わせて自由自在に設定できます。Excel の列名がタグ名と同じなら、そのまま取り込みます。"}}, {"@type": "Question", "name": "自分のメールアドレスから送られますか", "acceptedAnswer": {"@type": "Answer", "text": "はい。Outlook（Microsoft 365）か Gmail のアカウントで連携し、本人のメールボックスから送ります。配信用の別のアドレスは要りません。返信もいつもの受信トレイに届きます。"}}, {"@type": "Question", "name": "添付ファイルの上限はいくつですか", "acceptedAnswer": {"@type": "Answer", "text": "1 ファイル 10MB、1 配信の合計 25MB、10 ファイルまでです。PDF・Excel（.xlsx）・CSV・PNG・JPG に対応しています。"}}, {"@type": "Question", "name": "一度に何社まで送れますか", "acceptedAnswer": {"@type": "Answer", "text": "宛先の数に上限はありません。送信はメールサービスの制限（1 分あたりの通数）に合わせたペースで進み、画面を閉じても続きます。進捗画面で 1 社ずつの結果を確認できます。"}}, {"@type": "Question", "name": "Outlook と Gmail のどちらでも使えますか", "acceptedAnswer": {"@type": "Answer", "text": "はい。Outlook（Microsoft 365）と Gmail（Google Workspace）に対応しています。ほかのメールもご相談ください。"}}, {"@type": "Question", "name": "導入までにどのくらいかかりますか", "acceptedAnswer": {"@type": "Answer", "text": "お問い合わせから最短当日です。お使いのメールとの連携を許可し（10 分ほど）、Excel の顧客リストを取り込めば、その日の配信から使えます。"}}, {"@type": "Question", "name": "導入に必要なものは何ですか", "acceptedAnswer": {"@type": "Answer", "text": "顧客リストの Excel（企業名・担当者・メールアドレス・タグ）と、Outlook か Gmail のアカウントです。パソコンへのインストールは不要で、Chrome か Edge で使います。初回はメールとの連携の許可が必要です。"}}]}</script>
+<style>
+  /* Layout: SaaS の LP の型（配配メール・blastmail・SPIRAL・メディア SMS の 1 画面目）に合わせた。
+     白地に黒の太い見出し、紺を主色、オレンジを申し込みボタンに。右にノート PC 枠の実画面と浮かぶ封筒。
+     ヒーロー → 数字の帯 → 紺の帯（困りごと） → 3 ステップ（大きな番号とイラスト） → 触れるデモ → 選ばれる理由 → 比較表 → 画面で見る特長 → 導入の流れ → 料金 → 安心 → FAQ → 申し込みフォーム。
+     右下に資料のバナーと「上へ」ボタン、スマホは下に追従ボタン。 */
+  :root {
+    --bg: #ffffff; --soft: #f3f7fb; --ink: #1b1b1f; --text: #3b3f48; --muted: #6b7280; --line: #e3e8ef; --line-strong: #c9d2de;
+    --navy: #1f3b63; --navy-deep: #16304f; --navy-tint: #e8f0f8; --sky: #78a0c6; --on-navy: #ffffff; --on-navy-muted: rgba(255, 255, 255, 0.72); --on-navy-line: rgba(255, 255, 255, 0.2); --on-navy-card: rgba(255, 255, 255, 0.08);
+    --orange: #ff4a00; --orange-deep: #e64200; --orange-tint: rgba(255, 74, 0, 0.08); --orange-line: rgba(255, 74, 0, 0.3);
+    --good: #1f7a3e; --good-tint: rgba(31, 122, 62, 0.1); --bad: #b3261e; --bad-tint: rgba(179, 38, 30, 0.08);
+    --card: #ffffff; --shadow: 0 18px 40px rgba(31, 59, 99, 0.14); --screen-bezel: #1d2229;
+    --font: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", YuGothic, Arial, sans-serif;
+    --mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+    --max: 1100px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121418; --soft: #1a1f27; --ink: #f1f3f6; --text: #d3d7de; --muted: #a2a9b6; --line: rgba(255, 255, 255, 0.12); --line-strong: rgba(255, 255, 255, 0.28);
+      --navy: #8fb3d9; --navy-deep: #1b2b40; --navy-tint: rgba(120, 160, 198, 0.16); --sky: #78a0c6; --on-navy: #f1f3f6;
+      --orange: #ff6a2a; --orange-deep: #ff4a00; --orange-tint: rgba(255, 106, 42, 0.14); --orange-line: rgba(255, 106, 42, 0.4);
+      --good: #7fd49a; --good-tint: rgba(127, 212, 154, 0.14); --bad: #ff8a80; --bad-tint: rgba(255, 138, 128, 0.12);
+      --card: #1a1f27; --shadow: 0 18px 40px rgba(0, 0, 0, 0.45); --screen-bezel: #2a3038; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121418; --soft: #1a1f27; --ink: #f1f3f6; --text: #d3d7de; --muted: #a2a9b6; --line: rgba(255, 255, 255, 0.12); --line-strong: rgba(255, 255, 255, 0.28);
+    --navy: #8fb3d9; --navy-deep: #1b2b40; --navy-tint: rgba(120, 160, 198, 0.16); --sky: #78a0c6; --on-navy: #f1f3f6;
+    --orange: #ff6a2a; --orange-deep: #ff4a00; --orange-tint: rgba(255, 106, 42, 0.14); --orange-line: rgba(255, 106, 42, 0.4);
+    --good: #7fd49a; --good-tint: rgba(127, 212, 154, 0.14); --bad: #ff8a80; --bad-tint: rgba(255, 138, 128, 0.12);
+    --card: #1a1f27; --shadow: 0 18px 40px rgba(0, 0, 0, 0.45); --screen-bezel: #2a3038; color-scheme: dark;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 1.85; -webkit-font-smoothing: antialiased; font-feature-settings: "palt"; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); }
+  ::selection { background: var(--orange); color: #fff; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible, [contenteditable]:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+  img { max-width: 100%; }
+  button { font-family: inherit; cursor: pointer; }
+  svg.i { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+  .gutter { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+  .inner { max-width: var(--max); margin: 0 auto; min-width: 0; }
+  .nw { white-space: nowrap; }
+  .nw-d { white-space: nowrap; }
+  @media (max-width: 600px) { .nw-d { white-space: normal; } }
+  .navy { color: var(--navy); }
+  .or { color: var(--orange); }
+
+  /* header */
+  .site-head { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .site-head .inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 900; font-size: 17px; letter-spacing: 0.02em; min-width: 0; }
+  .brand .mark { flex: none; width: 34px; height: 34px; border-radius: 9px; background: var(--orange); display: grid; place-items: center; }
+  .brand .mark svg { width: 22px; height: 22px; display: block; }
+  .brand .by { font-size: 11px; color: var(--muted); font-weight: 500; margin-left: 4px; }
+  .site-head nav { display: flex; align-items: center; gap: 22px; font-size: 13.5px; font-weight: 700; }
+  .site-head nav a { text-decoration: none; color: var(--text); }
+  .site-head nav a:hover { color: var(--navy); }
+  .site-head .btns { display: flex; gap: 8px; margin-left: 6px; }
+  .b-navy { background: var(--navy); color: var(--on-navy) !important; padding: 10px 18px; border-radius: 8px; font-weight: 700; }
+  .b-navy:hover { background: var(--navy-deep); }
+  .b-or { background: var(--orange); color: #fff !important; padding: 10px 18px; border-radius: 8px; font-weight: 700; }
+  .b-or:hover { background: var(--orange-deep); }
+  @media (max-width: 900px) { .site-head nav a:not(.b-navy):not(.b-or) { display: none; } .brand .by { display: none; } .site-head .b-navy { display: none; } }
+
+  /* type & buttons */
+  .eyebrow { display: inline-block; font-size: 12.5px; letter-spacing: 0.12em; color: var(--navy); font-weight: 900; margin-bottom: 12px; padding-bottom: 4px; border-bottom: 3px solid var(--orange); }
+  h2 { font-size: clamp(26px, 3.6vw, 38px); line-height: 1.4; margin-bottom: 14px; text-wrap: balance; font-weight: 900; letter-spacing: 0.01em; }
+  h3 { font-size: 18px; margin-bottom: 8px; line-height: 1.6; font-weight: 900; }
+  p { margin-bottom: 1em; }
+  .lead { font-size: 16.5px; max-width: 44em; color: var(--text); }
+  .sec-head { max-width: 50em; margin-bottom: 34px; }
+  .sec-head.center { text-align: center; margin-left: auto; margin-right: auto; }
+  .btn-main { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--orange); color: #fff; text-decoration: none; font-weight: 900; letter-spacing: 0.04em; padding: 16px 30px; border-radius: 10px; transition: background 0.2s, transform 0.2s; border: 0; font-size: 16.5px; box-shadow: 0 8px 22px rgba(255, 74, 0, 0.3); }
+  .btn-main:hover { background: var(--orange-deep); transform: translateY(-1px); }
+  .btn-sub { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 2px solid var(--navy); color: var(--navy); text-decoration: none; font-weight: 900; padding: 14px 26px; border-radius: 10px; font-size: 15.5px; background: transparent; }
+  .btn-sub:hover { background: var(--navy-tint); }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 10px; }
+  .ph { background: var(--orange-tint); border: 1px solid var(--orange-line); color: var(--orange-deep); padding: 0 6px; border-radius: 4px; font-weight: 700; font-size: 0.92em; }
+
+  /* hero */
+  .hero { background: linear-gradient(180deg, var(--bg) 0%, var(--soft) 100%); overflow: hidden; }
+  .hero .inner { display: grid; grid-template-columns: minmax(0, 11fr) minmax(0, 10fr); gap: 40px; align-items: center; padding-block: 56px 64px; }
+  .cat { display: inline-block; font-size: 13px; font-weight: 900; color: var(--navy); background: var(--navy-tint); border-radius: 6px; padding: 5px 12px; margin-bottom: 18px; letter-spacing: 0.04em; }
+  .bubbles { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+  .bubble { position: relative; background: var(--card); border: 1.5px solid var(--line-strong); color: var(--text); font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px; }
+  .bubble::after { content: ""; position: absolute; left: 18px; bottom: -8px; border: 7px solid transparent; border-top-color: var(--line-strong); border-bottom: 0; }
+  .hero h1 { font-size: clamp(32px, 4.9vw, 54px); line-height: 1.3; font-weight: 900; letter-spacing: 0.005em; margin-bottom: 16px; text-wrap: balance; }
+  .hero h1 .ul { background: linear-gradient(transparent 62%, rgba(255, 74, 0, 0.28) 62%); }
+  .hero .sub { font-size: clamp(15.5px, 1.5vw, 17.5px); color: var(--text); max-width: 32em; margin-bottom: 24px; line-height: 1.9; }
+  .hero-pts { list-style: none; display: grid; gap: 10px; margin: 4px 0 26px; max-width: 34em; }
+  .hero-pts li { display: flex; align-items: flex-start; gap: 10px; font-size: clamp(16px, 1.6vw, 18.5px); line-height: 1.6; color: var(--ink); font-weight: 500; }
+  .hero-pts li .n { flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--orange); color: #fff; font-size: 13px; font-weight: 900; display: grid; place-items: center; margin-top: 2px; }
+  .hero-pts b { font-weight: 900; color: var(--navy); background: linear-gradient(transparent 62%, var(--navy-tint) 62%); padding: 0 2px; }
+  .hero-lead { font-size: clamp(18px, 2vw, 22px); font-weight: 900; margin: 0 0 4px; color: var(--ink); line-height: 1.5; }
+  .hero-lead b { color: var(--orange); }
+  .hero-made { font-size: 15px; color: var(--text); font-weight: 500; margin: 0 0 10px; line-height: 1.7; }
+  .hero-made b { color: var(--navy); font-weight: 900; background: linear-gradient(transparent 62%, var(--navy-tint) 62%); padding: 0 2px; }
+  .hero-made2 { font-size: 14.5px; font-weight: 700; color: var(--navy); margin: -12px 0 24px; }
+  .hero-eg { font-size: 14px; color: var(--muted); font-weight: 700; margin: 0 0 8px; }
+  .hero-ok { list-style: none; display: grid; gap: 8px; margin: 0 0 24px; max-width: 38em; }
+  .hero-ok li { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; font-size: clamp(14.5px, 1.4vw, 16px); font-weight: 700; color: var(--ink); line-height: 1.5; box-shadow: 0 4px 14px rgba(31, 59, 99, 0.06); }
+  .hero-ok .q { flex: 1 1 16em; min-width: 0; }
+  .hero-ok .ans { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+  .hero-ok .ar { color: var(--orange); font-weight: 900; }
+  .hero-ok .ok { color: #fff; background: var(--orange); border-radius: 999px; padding: 3px 12px; font-weight: 900; white-space: nowrap; }
+  .hero .checks3 { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 22px; font-size: 13.5px; color: var(--text); font-weight: 700; }
+  .hero .checks3 li { display: flex; align-items: center; gap: 6px; }
+  .hero .checks3 svg { width: 18px; height: 18px; color: var(--orange); stroke-width: 2.4; }
+  @media (max-width: 900px) { .hero .inner { grid-template-columns: 1fr; gap: 36px; padding-block: 36px 44px; } }
+
+  /* laptop stage */
+  .stage { position: relative; padding: 6% 5% 4%; min-width: 0; }
+  .laptop { position: relative; z-index: 1; }
+  .laptop .screen { background: var(--screen-bezel); border-radius: 14px 14px 4px 4px; padding: 9px 9px 12px; box-shadow: var(--shadow); }
+  .laptop .screen img { display: block; width: 100%; aspect-ratio: 2336 / 1500; object-fit: cover; object-position: left top; border-radius: 5px; background: #fff; }
+  .laptop .base { height: 13px; margin: 0 -6%; background: linear-gradient(#e6eaf0, #c3cad4); border-radius: 0 0 14px 14px; position: relative; }
+  .laptop .base::before { content: ""; position: absolute; left: 50%; top: 0; width: 16%; height: 4px; transform: translateX(-50%); background: #aeb6c2; border-radius: 0 0 4px 4px; }
+  .env { position: absolute; z-index: 2; width: 11%; filter: drop-shadow(0 8px 14px rgba(31, 59, 99, 0.25)); animation: float 4s ease-in-out infinite; }
+  .env svg { width: 100%; height: auto; display: block; }
+  .env.e1 { left: 0; top: 14%; animation-delay: 0s; }
+  .env.e2 { right: -1%; top: 2%; width: 13%; animation-delay: 0.8s; }
+  .env.e3 { left: 10%; bottom: 4%; width: 9%; animation-delay: 1.6s; }
+  .env.e4 { right: 6%; bottom: 10%; width: 8%; animation-delay: 2.2s; }
+  .mcard { position: relative; z-index: 3; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; box-shadow: var(--shadow); font-size: 12px; line-height: 1.5; display: flex; align-items: center; gap: 8px; animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .mcard > span:nth-child(2) { min-width: 0; flex: 1; }
+  .mcard b { display: block; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mcard small { color: var(--muted); font-size: 11px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mcard .ok { background: var(--good-tint); color: var(--good); font-weight: 900; border-radius: 999px; padding: 2px 9px; font-size: 11px; white-space: nowrap; }
+  .feed { position: absolute; z-index: 3; right: -3%; top: 22%; width: 50%; display: grid; gap: 8px; }
+  @media (max-width: 900px) { .feed { width: 58%; } .mcard { padding: 7px 10px; } }
+  .pill { position: absolute; z-index: 3; left: 3%; top: -1%; background: var(--navy-deep); color: #fff; font-size: 12.5px; font-weight: 700; border-radius: 999px; padding: 6px 14px 6px 12px; display: flex; gap: 8px; align-items: center; box-shadow: var(--shadow); white-space: nowrap; }
+  .pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); animation: blink 1s infinite; flex: none; }
+  .pill.done .dot { background: #7fd49a; animation: none; }
+  .pill b { font-variant-numeric: tabular-nums; }
+  .trust { font-size: 13px; color: var(--muted); margin: 14px 0 0; }
+  @keyframes blink { 50% { opacity: 0.25; } }
+  .rv { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .rv.in { opacity: 1; transform: none; }
+  .mcard .av { width: 26px; height: 26px; border-radius: 50%; background: var(--navy-tint); color: var(--navy); display: grid; place-items: center; flex: none; }
+  .mcard .av svg { width: 15px; height: 15px; }
+  @keyframes float { 0%, 100% { transform: translateY(0) rotate(-6deg); } 50% { transform: translateY(-10px) rotate(-2deg); } }
+  @keyframes rise { from { transform: translateY(14px); opacity: 0; } to { transform: none; opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .env, .mcard, .pill .dot { animation: none; } .rv { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } .btn-main { transition: none; } }
+
+  /* stats band */
+  .band { background: var(--bg); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .band .inner { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .band .s { padding: 22px 16px; text-align: center; border-left: 1px solid var(--line); min-width: 0; }
+  .band .s:first-child { border-left: 0; }
+  .band .s .l { font-size: 12.5px; font-weight: 700; color: var(--muted); display: block; }
+  .band .s .v { font-size: clamp(26px, 3vw, 34px); font-weight: 900; color: var(--navy); line-height: 1.2; font-variant-numeric: tabular-nums; display: block; letter-spacing: -0.01em; }
+  .band .s .v small { font-size: 0.5em; margin-left: 2px; }
+  .band .s .d { font-size: 12px; color: var(--muted); display: block; }
+  @media (max-width: 860px) { .band .inner { grid-template-columns: repeat(2, minmax(0, 1fr)); } .band .s:nth-child(3) { border-left: 0; } .band .s:nth-child(n+3) { border-top: 1px solid var(--line); } }
+
+  /* sections */
+  section { padding-block: 84px 0; }
+  .soft { background: var(--soft); margin-top: 84px; padding-block: 76px; }
+  .soft + section { padding-top: 84px; }
+  @media (max-width: 860px) { section { padding-block: 56px 0; } .soft { margin-top: 56px; padding-block: 56px; } .soft + section { padding-top: 56px; } }
+
+  /* dark band: 困りごと */
+  .dark-band { background: var(--navy-deep); color: var(--on-navy); margin-top: 84px; padding-block: 64px; }
+  .dark-band .eyebrow { color: var(--on-navy); border-color: var(--orange); }
+  .dark-band h2 { color: var(--on-navy); }
+  .dark-band .lead { color: var(--on-navy-muted); }
+  .ba { display: grid; grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr); gap: 16px; align-items: center; margin-top: 10px; }
+  .ba .col { background: var(--on-navy-card); border: 1px solid var(--on-navy-line); border-radius: 14px; padding: 22px 22px; min-width: 0; }
+  .ba .col .t { font-size: 13px; font-weight: 900; letter-spacing: 0.1em; margin-bottom: 10px; color: var(--on-navy-muted); }
+  .ba .col.after { background: var(--on-navy); color: var(--ink); border-color: transparent; }
+  .ba .col.after .t { color: var(--orange-deep); }
+  .ba ul { list-style: none; display: grid; gap: 9px; }
+  .ba li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.6; }
+  .ba li .x { flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-weight: 900; font-size: 13px; margin-top: 3px; background: rgba(255, 255, 255, 0.14); color: var(--on-navy); }
+  .ba .after li .x { background: var(--orange); color: #fff; }
+  .ba .arrow { display: grid; place-items: center; color: var(--orange); }
+  .ba .arrow svg { width: 40px; height: 40px; stroke-width: 2.2; }
+  @media (max-width: 860px) { .dark-band { margin-top: 56px; padding-block: 48px; } .ba { grid-template-columns: 1fr; } .ba .arrow svg { transform: rotate(90deg); } }
+  .ba2 { display: grid; grid-template-columns: minmax(0, 1fr) 48px minmax(0, 1fr); gap: 18px; align-items: start; margin-top: 10px; }
+  .ba2 .arrow { display: grid; place-items: center; color: var(--orange); padding-top: 160px; }
+  .ba2 .arrow svg { width: 40px; height: 40px; stroke-width: 2.2; }
+  .mailbox { background: #fff; color: #1b1b1f; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); min-width: 0; }
+  .mailbox.bad { opacity: 0.9; }
+  .mailbox .tag { padding: 10px 16px; font-size: 13px; font-weight: 900; letter-spacing: 0.06em; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .mailbox.bad .tag { background: #e9ecf1; color: #5b6472; }
+  .mailbox.good .tag { background: #ff4a00; color: #fff; }
+  .mailbox .tag small { font-weight: 700; font-size: 11.5px; opacity: 0.85; }
+  .mailbox .mh { padding: 12px 16px; border-bottom: 1px solid #e3e8ef; font-size: 12.5px; color: #6b7280; display: grid; gap: 3px; }
+  .mailbox .mh b { color: #1b1b1f; font-weight: 700; }
+  .mailbox .mh .warn { color: #b3261e; font-weight: 700; }
+  .mailbox .mb { padding: 14px 16px 10px; font-size: 14px; line-height: 1.75; }
+  .mailbox .mb p { margin: 0 0 8px; }
+  .mailbox .mb .hl { background: rgba(255, 74, 0, 0.1); border-left: 3px solid #ff4a00; padding: 6px 10px; margin: 6px 0 10px; border-radius: 0 6px 6px 0; font-weight: 700; color: #e64200; }
+  .mailbox .mb .nm { background: rgba(31, 59, 99, 0.1); border-radius: 4px; padding: 0 5px; font-weight: 700; color: #1f3b63; }
+  .mailbox .mb .sig { color: #6b7280; font-size: 13px; }
+  .mailbox .att { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 16px 14px; }
+  .mailbox .att span { font-size: 12px; background: #f3f7fb; border: 1px solid #e3e8ef; border-radius: 6px; padding: 3px 9px; color: #1f3b63; font-weight: 700; }
+  .mailbox .att .lbl { background: none; border: 0; padding: 3px 0; color: #1b1b1f; font-weight: 400; font-size: 13px; }
+  .mailbox .verdict { list-style: none; display: grid; gap: 5px; padding: 12px 16px 14px; border-top: 1px solid #e3e8ef; font-size: 13px; background: #fafbfd; }
+  .mailbox .verdict li { display: flex; gap: 8px; align-items: flex-start; line-height: 1.5; }
+  .mailbox .verdict li::before { flex: none; font-weight: 900; width: 16px; }
+  .mailbox.bad .verdict li::before { content: "×"; color: #b3261e; }
+  .mailbox.good .verdict li::before { content: "✓"; color: #1f7a3e; }
+  .mailbox .num { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: #ff4a00; color: #fff; font-size: 11px; font-weight: 900; margin-right: 6px; vertical-align: -3px; }
+  .dark-band .fine-note { color: var(--on-navy-muted); font-size: 12.5px; margin: 16px 0 0; }
+  @media (max-width: 860px) { .ba2 { grid-template-columns: 1fr; } .ba2 .arrow { padding: 0; } .ba2 .arrow svg { transform: rotate(90deg); } }
+
+  /* calculator */
+  .calc { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(31, 59, 99, 0.08); margin-bottom: 36px; }
+  .calc .q { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; font-weight: 900; font-size: 17px; }
+  .calc .q output { font-size: 36px; color: var(--navy); font-variant-numeric: tabular-nums; min-width: 2.2ch; text-align: right; line-height: 1; }
+  .calc .q .unit { font-size: 15px; color: var(--muted); font-weight: 700; margin-right: 6px; }
+  .calc input[type="range"] { flex: 1; min-width: 180px; accent-color: var(--orange); height: 28px; }
+  .calc .cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+  .calc .c { border: 1px solid var(--line); border-radius: 12px; padding: 16px; min-width: 0; background: var(--bg); }
+  .calc .c.me { border: 2px solid var(--orange); background: var(--orange-tint); }
+  .calc .c h4 { font-size: 14px; font-weight: 900; margin-bottom: 8px; }
+  .calc .c .ops { font-size: 32px; font-weight: 900; font-variant-numeric: tabular-nums; line-height: 1.1; color: var(--ink); }
+  .calc .c .ops small { font-size: 13px; font-weight: 700; color: var(--muted); margin-left: 4px; }
+  .calc .c.me .ops { color: var(--orange-deep); }
+  .calc .c .bar { height: 8px; border-radius: 4px; background: var(--line); margin: 10px 0 8px; overflow: hidden; }
+  .calc .c .bar i { display: block; height: 100%; background: var(--navy); border-radius: 4px; transition: width 0.3s; }
+  .calc .c.me .bar i { background: var(--orange); }
+  .calc .c .f { font-size: 12.5px; color: var(--muted); margin: 0 0 8px; min-height: 2.6em; }
+  .calc .c ul { list-style: none; display: grid; gap: 3px; font-size: 12.5px; color: var(--text); }
+  .calc .c li::before { font-weight: 900; margin-right: 4px; }
+  .calc .c li.ok::before { content: "○"; color: var(--good); }
+  .calc .c li.ng::before { content: "×"; color: var(--bad); }
+  .calc .note { font-size: 12.5px; color: var(--muted); margin: 14px 0 0; }
+  @media (max-width: 860px) { .calc .cols { grid-template-columns: 1fr; } .calc .c .f { min-height: 0; } }
+  .sub-h { font-size: 19px; font-weight: 900; margin: 0 0 14px; }
+  .cta-strip { margin-top: 56px; }
+  .cs { background: var(--navy-tint); border-radius: 16px; padding: 22px 26px; display: flex; justify-content: space-between; align-items: center; gap: 16px 24px; flex-wrap: wrap; }
+  .cs b { display: block; font-size: 19px; font-weight: 900; line-height: 1.5; }
+  .cs span { font-size: 13.5px; color: var(--text); }
+  .cs .btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .cs .btn-main { padding: 13px 22px; font-size: 15px; }
+  .cs .btn-sub { padding: 11px 20px; font-size: 14px; background: var(--card); }
+  .dark-band .cta-strip { margin-top: 0; }
+  .dark-band .cs { color: var(--ink); }
+  .dark-band .cs b { color: var(--ink); }
+  .dark-band .cs span { color: var(--text); }
+  .custom-note { margin-top: 22px; background: var(--card); color: var(--ink); border-left: 5px solid var(--orange); border-radius: 0 14px 14px 0; padding: 18px 22px; font-size: 16px; font-weight: 700; line-height: 1.7; }
+  .custom-note small { display: block; font-weight: 400; font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .mailbox .dl { color: #1f3b63; text-decoration: underline; word-break: break-all; font-size: 13px; }
+  .sec-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  @media (max-width: 860px) { .sec-grid { grid-template-columns: 1fr; } .cs b { font-size: 17px; } }
+
+  /* 個社対応の事例 */
+  .cases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .case { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(31, 59, 99, 0.08); min-width: 0; display: flex; flex-direction: column; }
+  .case .ch { padding: 13px 18px; background: var(--navy-deep); color: #fff; font-weight: 900; font-size: 14.5px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .case .ch small { font-weight: 700; font-size: 11.5px; opacity: 0.8; white-space: nowrap; }
+  .case .req { margin: 16px 18px 0; position: relative; background: var(--navy-tint); border-radius: 12px; padding: 12px 14px; font-size: 14px; font-weight: 700; color: var(--ink); line-height: 1.65; }
+  .case .req::after { content: ""; position: absolute; left: 22px; bottom: -8px; border: 8px solid transparent; border-top-color: var(--navy-tint); border-bottom: 0; }
+  .case .req .who { display: block; font-size: 11.5px; color: var(--muted); font-weight: 700; margin-bottom: 3px; }
+  .case table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 16px 0 0; }
+  .case th { font-size: 11.5px; color: var(--muted); font-weight: 700; padding: 6px 8px; text-align: center; border-bottom: 1px solid var(--line); line-height: 1.4; }
+  .case th:first-child { text-align: left; padding-left: 18px; }
+  .case th.a { color: var(--orange-deep); white-space: nowrap; }
+  .case td { padding: 9px 8px; border-bottom: 1px solid var(--line); text-align: center; vertical-align: middle; line-height: 1.45; }
+  .case td:first-child { text-align: left; padding-left: 18px; font-weight: 700; }
+  .case td small { display: block; font-weight: 400; font-size: 11px; color: var(--muted); }
+  .case td.b { font-weight: 900; font-size: 17px; color: var(--bad); }
+  .case td.b.t { color: var(--muted); }
+  .case td.ar { color: var(--orange); width: 26px; padding: 0; font-weight: 900; }
+  .case td.a { color: var(--good); font-weight: 900; font-size: 17px; background: var(--orange-tint); }
+  .case td.a small { color: var(--good); font-weight: 700; }
+  .case .sum { margin-top: auto; padding: 12px 18px 16px; font-size: 13.5px; color: var(--text); border-top: 1px solid var(--line); background: var(--soft); display: flex; align-items: center; gap: 10px; }
+  .case .sum b { font-size: 22px; color: var(--good); font-variant-numeric: tabular-nums; }
+  .case .sum .bef { color: var(--bad); font-size: 22px; font-weight: 900; }
+  .case.ask { border: 2px dashed var(--orange); background: var(--orange-tint); padding: 24px 22px; box-shadow: none; }
+  .case.ask h3 { font-size: 21px; margin-bottom: 6px; }
+  .case.ask p { font-size: 14px; color: var(--text); margin-bottom: 10px; }
+  .case.ask ul { list-style: none; display: grid; gap: 7px; margin: 0 0 18px; font-size: 13.5px; font-weight: 700; color: var(--ink); }
+  .case.ask li { background: var(--card); border-radius: 8px; padding: 8px 12px; border: 1px solid var(--line); }
+  .case.ask li small { font-weight: 700; color: var(--good); margin-left: 6px; }
+  .case.ask .btn-main { margin-top: auto; align-self: flex-start; }
+  @media (max-width: 900px) { .cases { grid-template-columns: 1fr; } }
+  .done-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; justify-content: center; }
+  .done-chips span { font-size: 13px; font-weight: 700; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; display: inline-flex; gap: 8px; align-items: center; }
+  .done-chips span i { font-style: normal; font-size: 11px; color: #fff; background: var(--good); border-radius: 999px; padding: 1px 8px; }
+  .done-chips span.ask { border-color: var(--orange); }
+  .done-chips span.ask i { background: var(--orange); }
+  .step .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; position: relative; }
+  .step .tags span { font-size: 12px; font-weight: 700; border: 1.5px solid var(--navy); color: var(--navy); border-radius: 999px; padding: 3px 10px; }
+  .step .tags span.on { background: var(--navy); color: var(--on-navy); }
+  .step .tags .more { border: 0; color: var(--muted); padding-left: 2px; }
+  .step .win.tall { aspect-ratio: 16 / 10; }
+
+  /* window frame for UI crops */
+  .win { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); }
+  .win .bar { display: flex; align-items: center; gap: 6px; padding: 8px 12px; border-bottom: 1px solid var(--line); background: var(--soft); }
+  .win .bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); display: block; }
+  .win .bar span { margin-left: 8px; font-size: 11.5px; color: var(--muted); font-weight: 700; letter-spacing: 0.02em; }
+  .win img { display: block; width: 100%; }
+
+  /* 3 steps */
+  .steps3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+  .step { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px 22px 22px; min-width: 0; box-shadow: 0 10px 30px rgba(31, 59, 99, 0.08); overflow: hidden; }
+  .step .big { position: absolute; right: 14px; top: -14px; font-size: 110px; font-weight: 900; line-height: 1; color: var(--navy-tint); letter-spacing: -0.04em; user-select: none; }
+  .step .n { display: inline-block; font-size: 12px; font-weight: 900; letter-spacing: 0.16em; color: var(--orange); margin-bottom: 8px; position: relative; }
+  .step h3 { font-size: 19.5px; position: relative; }
+  .step p { font-size: 14.5px; color: var(--text); margin-bottom: 14px; position: relative; }
+  .step .ill { position: relative; margin: 2px 0 14px; }
+  .step .ill svg { width: 100%; height: auto; display: block; }
+  .step .win { position: relative; }
+  .only-m { display: none; }
+  .pframe { margin: 4px auto 0; max-width: 300px; border: 7px solid #1d2229; border-radius: 26px; overflow: hidden; box-shadow: var(--shadow); background: #fff; }
+  .pframe img { display: block; width: 100%; }
+  @media (max-width: 860px) { .step .win.only-d { display: none; } .only-m { display: block; } }
+  .step .win.tall img { height: 100%; object-fit: cover; object-position: left top; }
+  @media (max-width: 860px) { .steps3 { grid-template-columns: 1fr; } }
+
+  /* reasons */
+  .reasons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .reason { background: var(--card); border-radius: 16px; padding: 26px 24px; min-width: 0; border-top: 5px solid var(--navy); box-shadow: 0 10px 30px rgba(31, 59, 99, 0.08); }
+  .reason .ic { width: 52px; height: 52px; border-radius: 14px; background: var(--navy-tint); color: var(--navy); display: grid; place-items: center; margin-bottom: 14px; }
+  .reason .ic svg { width: 26px; height: 26px; }
+  .reason h3 { font-size: 18px; }
+  .reason p { font-size: 14.5px; color: var(--text); margin: 0; }
+  @media (max-width: 860px) { .reasons { grid-template-columns: 1fr; } }
+
+  /* demo */
+  .demo-win { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+  .demo-win .bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; border-bottom: 1px solid var(--line); background: var(--soft); }
+  .demo-win .bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); display: block; }
+  .demo-win .bar span { margin-left: 8px; font-size: 12px; color: var(--muted); font-weight: 700; }
+  .demo-body { padding: 20px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+  .chip { border: 1.5px solid var(--line-strong); background: transparent; color: var(--ink); border-radius: 999px; padding: 6px 14px; font-size: 13.5px; font-weight: 700; }
+  .chip.on { background: var(--navy); color: var(--on-navy); border-color: var(--navy); }
+  .chips .cnt { margin-left: auto; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .tbl-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+  table.demo { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 760px; }
+  .demo th, .demo td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; white-space: nowrap; }
+  .demo thead th { background: var(--soft); font-weight: 700; font-size: 12.5px; color: var(--muted); }
+  .demo thead th.type { color: var(--ink); text-align: center; min-width: 56px; }
+  .demo thead th.type span[contenteditable] { display: inline-block; min-width: 2em; padding: 0 4px; border-bottom: 1px dashed var(--line-strong); cursor: text; }
+  .demo tbody tr:last-child td { border-bottom: none; }
+  .demo tr.on td { background: var(--orange-tint); }
+  .demo td.name { font-weight: 700; }
+  .demo td.msg input { width: 250px; font: inherit; font-size: 13.5px; padding: 7px 10px; border: 1px solid var(--line-strong); border-radius: 8px; background: var(--bg); color: var(--ink); }
+  .demo td.mark { text-align: center; }
+  .demo td.mark button { width: 30px; height: 30px; border-radius: 50%; border: 1px dashed var(--line-strong); background: transparent; color: var(--navy); font-size: 16px; line-height: 1; }
+  .demo td.mark button.on { border: 0; background: var(--navy-tint); }
+  .demo td.st { font-size: 12.5px; color: var(--muted); min-width: 76px; }
+  .demo td.st.sent { color: var(--good); font-weight: 700; }
+  .demo input[type="checkbox"] { width: 17px; height: 17px; accent-color: var(--orange); }
+  .addcol { display: flex; gap: 8px; align-items: center; margin-top: 12px; flex-wrap: wrap; }
+  .addcol input { font: inherit; font-size: 13.5px; padding: 8px 10px; border: 1px solid var(--line-strong); border-radius: 8px; background: var(--bg); color: var(--ink); width: 170px; }
+  .addcol button, .demo-actions button { font-size: 13.5px; font-weight: 700; padding: 8px 16px; border-radius: 8px; border: 1.5px solid var(--navy); background: transparent; color: var(--navy); }
+  .addcol .hint { font-size: 12.5px; color: var(--muted); }
+  .demo-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; align-items: center; }
+  .demo-actions button.go { background: var(--orange); border-color: var(--orange); color: #fff; }
+  .demo-actions .prog { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .demo-right { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 20px; align-items: start; border-top: 1px solid var(--line); margin-top: 18px; padding-top: 18px; }
+  .demo-right label { display: block; font-size: 12.5px; font-weight: 700; color: var(--muted); margin: 0 0 6px; }
+  .demo-right textarea { width: 100%; font: inherit; font-size: 14px; padding: 10px 12px; border: 1px solid var(--line-strong); border-radius: 10px; background: var(--bg); color: var(--ink); min-height: 150px; resize: vertical; }
+  .mail { background: var(--soft); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; font-size: 14px; }
+  .mail .hd { font-size: 12.5px; color: var(--muted); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 10px; display: grid; gap: 2px; }
+  .mail .hd b { color: var(--ink); }
+  .mail .part { white-space: pre-wrap; line-height: 1.7; }
+  .mail .part.pm { color: var(--orange-deep); font-weight: 700; }
+  .mail .part.sig { color: var(--muted); }
+  .mail .part + .part { margin-top: 10px; }
+  .count { font-size: 15px; margin-top: 12px; }
+  .count b { color: var(--orange-deep); font-size: 24px; font-variant-numeric: tabular-nums; }
+  .demo-note { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+  @media (max-width: 920px) { .demo-right { grid-template-columns: 1fr; } }
+
+  /* compare */
+  .cmp-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--card); }
+  table.cmp { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 700px; }
+  .cmp th, .cmp td { padding: 13px 14px; border-bottom: 1px solid var(--line); text-align: center; vertical-align: middle; line-height: 1.6; }
+  .cmp th:first-child, .cmp td:first-child { text-align: left; font-weight: 700; }
+  .cmp thead th { background: var(--navy-deep); color: #fff; font-weight: 700; white-space: nowrap; }
+  .cmp thead th.me { background: var(--orange); color: #fff; }
+  .cmp td.me { background: var(--orange-tint); font-weight: 700; }
+  .cmp tbody tr:last-child td { border-bottom: none; }
+  .cmp .ok { color: var(--good); font-weight: 900; font-size: 17px; }
+  .cmp .ng { color: var(--bad); font-weight: 900; font-size: 17px; }
+  .cmp .so { color: var(--muted); font-weight: 900; font-size: 17px; }
+  .cmp small { display: block; font-weight: 400; font-size: 12px; color: var(--muted); }
+
+  /* features (zoomed crops) */
+  .feat { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px; align-items: center; padding-block: 40px; border-top: 1px solid var(--line); }
+  .feat:first-of-type { border-top: 0; padding-top: 0; }
+  .feat:nth-child(even) .text { order: 2; }
+  .feat .fn { display: inline-block; font-size: 12px; font-weight: 900; letter-spacing: 0.16em; color: var(--orange); margin-bottom: 8px; }
+  .feat h3 { font-size: 22px; font-weight: 900; line-height: 1.5; margin-bottom: 10px; }
+  .feat p { font-size: 15.5px; margin-bottom: 10px; color: var(--text); }
+  .feat .fact { font-size: 13.5px; color: var(--muted); margin: 0; }
+  .feat .fact b { color: var(--navy); font-variant-numeric: tabular-nums; }
+  .feat .callouts { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .feat .callouts li { font-size: 12.5px; background: var(--navy-tint); border-radius: 999px; padding: 4px 12px; color: var(--navy); font-weight: 700; }
+  .feat .callouts li b { color: var(--orange-deep); margin-right: 4px; }
+  @media (max-width: 860px) { .feat { grid-template-columns: 1fr; gap: 20px; } .feat:nth-child(even) .text { order: 0; } }
+
+  /* onboarding */
+  .onb { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .onb .o { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 18px; min-width: 0; position: relative; }
+  .onb .o .n { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--navy); color: var(--on-navy); font-weight: 900; font-size: 15px; margin-bottom: 10px; }
+  .onb .o h3 { font-size: 16px; font-weight: 900; }
+  .onb .o p { font-size: 13.5px; color: var(--text); margin: 0; }
+  .onb .o .who { display: inline-block; margin-top: 10px; font-size: 11.5px; font-weight: 700; border-radius: 999px; padding: 2px 10px; background: var(--orange-tint); color: var(--orange-deep); }
+  @media (max-width: 860px) { .onb { grid-template-columns: 1fr; } }
+
+  /* price / trial / security */
+  .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px 22px; min-width: 0; }
+  .card p { margin-bottom: 0; font-size: 14.5px; color: var(--text); }
+  .card .icon { width: 44px; height: 44px; border-radius: 12px; background: var(--navy-tint); color: var(--navy); display: grid; place-items: center; margin-bottom: 12px; }
+  .k-label { font-size: 12px; letter-spacing: 0.16em; color: var(--orange); margin-bottom: 8px; font-weight: 900; }
+  .s-price { font-size: 26px; font-weight: 900; margin: 6px 0 8px; color: var(--ink); }
+  .trial { background: var(--card); border: 2px solid var(--orange); border-radius: 14px; padding: 22px 24px; margin-top: 16px; }
+  .trial ul { margin: 6px 0 0; padding-left: 1.3em; font-size: 15px; }
+  .trial li { margin-bottom: 4px; }
+  .checks { list-style: none; display: grid; gap: 10px; margin-top: 14px; }
+  .checks li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 13px 16px 13px 42px; position: relative; font-size: 14.5px; }
+  .checks li::before { content: "✓"; position: absolute; left: 16px; color: var(--orange); font-weight: 900; }
+  .checks.no li::before { content: "—"; color: var(--muted); }
+  @media (max-width: 860px) { .grid2, .grid3 { grid-template-columns: 1fr; } }
+
+  /* faq */
+  .faqs details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
+  .faqs summary { cursor: pointer; font-weight: 700; padding: 16px 44px 16px 56px; list-style: none; position: relative; }
+  .faqs summary::-webkit-details-marker { display: none; }
+  .faqs summary::before { content: "Q"; position: absolute; left: 16px; top: 14px; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: var(--on-navy); font-weight: 900; font-size: 14px; display: grid; place-items: center; }
+  .faqs summary::after { content: "＋"; position: absolute; right: 18px; top: 14px; color: var(--orange); font-weight: 400; font-size: 18px; }
+  .faqs details[open] summary::after { content: "−"; }
+  .faqs details p { padding: 0 20px 16px 56px; margin: 0; font-size: 14.5px; color: var(--text); }
+
+  /* cta + form */
+  .cta-box { background: var(--navy-deep); color: var(--on-navy); border-radius: 18px; padding: clamp(32px, 5vw, 56px); text-align: center; }
+  .cta-box .eyebrow { color: var(--on-navy); }
+  .cta-box h2 { color: var(--on-navy); }
+  .cta-box p { max-width: 38em; margin-left: auto; margin-right: auto; color: var(--on-navy-muted); }
+  .cta-box .addr { display: inline-flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; margin-top: 10px; }
+  .cta-box code { font-family: var(--font); font-size: 16px; background: var(--on-navy-card); border: 1px solid var(--on-navy-line); border-radius: 999px; padding: 8px 16px; user-select: all; color: var(--on-navy); }
+  .cta-box button { font: inherit; font-size: 13px; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--on-navy-line); background: transparent; color: var(--on-navy); }
+  .cta-mail { font-size: 13px; opacity: 0.8; margin-top: 14px; margin-bottom: 0; }
+  form.inq { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-top: 18px; max-width: 680px; margin-left: auto; margin-right: auto; }
+  .fh { background: var(--navy); color: var(--on-navy); padding: 16px 24px; font-weight: 900; font-size: 17px; display: flex; align-items: center; gap: 10px; }
+  .fh svg { width: 22px; height: 22px; }
+  .fb { padding: 24px; display: grid; gap: 12px; }
+  label { font-size: 14px; font-weight: 700; display: grid; gap: 6px; }
+  label .req { display: inline-block; font-size: 11px; background: var(--orange); color: #fff; border-radius: 4px; padding: 0 6px; margin-left: 6px; vertical-align: 1px; }
+  input, textarea, select { font: inherit; font-size: 15px; padding: 11px 12px; border: 1.5px solid var(--line-strong); border-radius: 8px; background: var(--bg); color: var(--ink); width: 100%; font-family: var(--font); }
+  textarea { min-height: 110px; resize: vertical; }
+  .fine { font-size: 12.5px; color: var(--muted); margin: 0; }
+  .sent-note { display: none; background: var(--orange-tint); border: 1px solid var(--orange-line); border-radius: 10px; padding: 12px 14px; font-size: 14px; }
+  .sent-note.show { display: block; }
+  .sent-note.ok { background: var(--good-tint); border-color: var(--good); color: var(--ink); }
+  .sent-note.err { background: var(--bad-tint); border-color: var(--bad); color: var(--ink); }
+  .sent-note a { color: var(--navy); font-weight: 700; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+  /* footer */
+  .site-foot { border-top: 1px solid var(--line); margin-top: 72px; padding-block: 32px 44px; font-size: 13px; color: var(--muted); background: var(--soft); }
+  .f-links { display: flex; flex-wrap: wrap; gap: 14px; margin: 0 auto 22px; max-width: var(--max); }
+  .f-links a { color: var(--ink); }
+  .f-co { max-width: var(--max); margin: 0 auto; }
+  .f-co p { margin-bottom: 4px; }
+  .f-name { font-weight: 700; color: var(--ink); }
+  .f-copy { margin-top: 14px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; }
+
+  /* floating doc banner / to-top / sticky */
+  #float-doc { position: fixed; right: 20px; bottom: 20px; z-index: 14; background: var(--card); border: 1.5px solid var(--navy); border-radius: 14px; padding: 12px 40px 12px 14px; display: flex; align-items: center; gap: 12px; box-shadow: var(--shadow); width: 320px; max-width: calc(100vw - 40px); }
+  #float-doc[hidden] { display: none; }
+  #float-doc .doc { width: 44px; height: 44px; border-radius: 10px; background: var(--navy-tint); color: var(--navy); display: grid; place-items: center; flex: none; }
+  #float-doc .doc svg { width: 24px; height: 24px; }
+  #float-doc .tx { font-size: 12.5px; line-height: 1.5; color: var(--text); flex: 1; min-width: 0; }
+  #float-doc .tx b { display: block; color: var(--ink); font-size: 13.5px; white-space: nowrap; }
+  #float-doc .tx a { display: block; width: max-content; margin-top: 6px; font-size: 12.5px; font-weight: 900; color: var(--on-navy); background: var(--navy); text-decoration: none; border-radius: 6px; padding: 5px 12px; }
+  #float-close { position: absolute; right: 8px; top: 8px; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line-strong); background: var(--bg); color: var(--muted); font-size: 14px; line-height: 1; }
+  #to-top { position: fixed; right: 20px; bottom: 112px; z-index: 14; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--navy); color: var(--on-navy); box-shadow: var(--shadow); display: grid; place-items: center; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+  #to-top.show { opacity: 1; pointer-events: auto; }
+  #to-top svg { width: 20px; height: 20px; stroke-width: 2.4; }
+  .sticky-cta { display: none; }
+  @media (max-width: 820px) {
+    #float-doc { display: none; }
+    #to-top { bottom: calc(86px + env(safe-area-inset-bottom, 0px)); right: 14px; width: 40px; height: 40px; }
+    .sticky-cta { display: flex; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 15; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); border-top: 1px solid var(--line);
+      padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+    .sticky-cta a { flex: 1; justify-content: center; padding: 12px 10px; font-size: 14px; box-shadow: none; }
+    body { padding-bottom: 76px; }
+  }
+
+  /* memo */
+  .memo { max-width: var(--max); margin: 0 auto; padding-block: 0 56px; }
+  .memo .warn { background: var(--card); border-left: 4px solid var(--orange); border-radius: 0 12px 12px 0; padding: 16px 20px; font-size: 14px; border-top: 1px solid var(--line); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .memo h2 { font-size: 16px; margin-bottom: 8px; font-weight: 700; }
+  .memo ul { padding-left: 1.3em; }
+  .memo li { margin-bottom: 4px; }
+  .memo code { font-family: var(--mono); font-size: 12.5px; background: var(--orange-tint); padding: 0 4px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L18 10l-4-4L4 16zM13 7l4 4"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 2h8l6 6v14H6z"/><path d="M14 2v6h6"/></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><path d="M21 11l-9 9a5 5 0 01-7-7l9-9a3.5 3.5 0 015 5l-9 9a2 2 0 01-3-3l8-8"/></symbol>
+    <symbol id="i-support" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0116 0v2"/><rect x="3" y="13" width="4" height="6" rx="1"/><rect x="17" y="13" width="4" height="6" rx="1"/><path d="M19 19a3 3 0 01-3 3h-3"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></symbol>
+    <symbol id="i-ms" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2h8l6 6v14H6z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></symbol>
+    <!-- 浮かぶ封筒（塗り） -->
+    <symbol id="env" viewBox="0 0 64 48"><rect x="2" y="4" width="60" height="40" rx="6" fill="#ffffff" stroke="#1f3b63" stroke-width="2.5"/><path d="M4 10l28 18 28-18" fill="none" stroke="#1f3b63" stroke-width="2.5" stroke-linejoin="round"/><path d="M4 40l20-14M60 40L40 26" fill="none" stroke="#1f3b63" stroke-width="2.5"/><circle cx="54" cy="10" r="7" fill="#ff4a00"/><path d="M50.5 10l2.5 2.5 4.5-4.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-head gutter">
+  <div class="inner">
+    <a class="brand" href="#top" aria-label="オーダーメール トップへ">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 300 300"><g transform="translate(60,60) scale(0.9)" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"><path d="M 152 28 L 69 28 A 46.5 46.5 0 0 0 69 121 L 115 121"/><path d="M 79 75 L 132 75 A 47 47 0 0 1 132 169 L 49 169"/></g></svg></span>
+      <span>オーダーメール</span><span class="by">by 株式会社シクミ</span>
+    </a>
+    <nav aria-label="ページ内">
+      <a href="#custom">個社対応</a><a href="#steps">仕組み</a><a href="#flow">導入</a><a href="#security">安心</a><a href="#faq">FAQ</a>
+      <span class="btns"><a class="b-navy" href="#contact">資料をもらう</a><a class="b-or" href="#contact">無料で試す</a></span>
+    </nav>
+  </div>
+</header>
+
+<section class="hero gutter" id="top">
+  <div class="inner">
+    <div>
+      <span class="cat">不動産売買仲介向け オーダーメイドのメール配信</span>
+      <div class="bubbles" aria-label="よくある困りごと">
+        <span class="bubble">BCC だと宛名が入らない</span>
+        <span class="bubble">40 社に手で送るのは大変</span>
+        <span class="bubble">誰に送ったか残らない</span>
+        <span class="bubble">個別に冒頭文を修正したい</span>
+        <span class="bubble">大容量 PDF を添付したい</span>
+      </div>
+      <h1>一斉送信なのに、<br><span class="navy nw">1 社 1 通</span>で<span class="ul">届く。</span></h1>
+      <p class="hero-lead">メール配信の仕組みのカスタマイズは<b>自由自在！</b></p>
+      <p class="hero-made">決まったサービスを売るのではなく、御社の業務に合わせて<b>オーダーメイド</b>で作ります。</p>
+      <p class="hero-eg">たとえば…</p>
+      <ul class="hero-ok">
+        <li><span class="q">宛名と冒頭の一言を宛先ごとに差し替えて配信したい</span><span class="ans"><span class="ar">→</span><span class="ok">可能です！</span></span></li>
+        <li><span class="q">BCC ではなく、営業本人のメールから配信したい</span><span class="ans"><span class="ar">→</span><span class="ok">可能です！</span></span></li>
+        <li><span class="q">マイナーな古いメールサーバーを使っているが、ここから配信したい</span><span class="ans"><span class="ar">→</span><span class="ok">可能です！</span></span></li>
+        <li><span class="q">現状、二重送信がどうしても起こってしまうが、なくしたい</span><span class="ans"><span class="ar">→</span><span class="ok">可能です！</span></span></li>
+      </ul>
+      <p class="hero-made2">御社の「こうしたい」も、まずお聞かせください。</p>
+      <div class="btn-row">
+        <a class="btn-main" href="#contact">無料で試してみる <svg class="i" style="width:18px;height:18px"><use href="#i-arrow"/></svg></a>
+        <a class="btn-sub" href="#contact">資料をもらう</a>
+      </div>
+      <ul class="checks3">
+        <li><svg class="i"><use href="#i-check"/></svg>インストール不要</li>
+        <li><svg class="i"><use href="#i-check"/></svg>Outlook・Gmail どちらも</li>
+        <li><svg class="i"><use href="#i-check"/></svg>試験提供は無料</li>
+      </ul>
+      <p class="trust">都内の不動産会社で試験提供中。クレジットカードの登録はありません。</p>
+    </div>
+    <div class="stage" aria-label="宛先を選ぶ画面をノート PC に表示し、宛名入りのメールが 1 社ずつ送られていく図">
+      <div class="laptop">
+        <div class="screen"><img src="img/ui_recipients.png" alt="宛先を選ぶ画面。タグで絞り込み、会社ごとの行に個別メッセージを書く"></div>
+        <div class="base"></div>
+      </div>
+      <div class="env e1" aria-hidden="true"><svg><use href="#env"/></svg></div>
+      <div class="env e2" aria-hidden="true"><svg><use href="#env"/></svg></div>
+      <div class="env e3" aria-hidden="true"><svg><use href="#env"/></svg></div>
+      <div class="env e4" aria-hidden="true"><svg><use href="#env"/></svg></div>
+      <div class="pill" aria-hidden="true"><span class="dot"></span><span id="pill-l">本人のメールから送信中</span><b id="pill-n">0 / 40</b></div>
+      <div class="feed" id="feed" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<div class="band gutter">
+  <div class="inner">
+    <div class="s"><span class="l">添付ファイル</span><span class="v">25<small>MB</small></span><span class="d">1 配信の合計。10 ファイルまで</span></div>
+    <div class="s"><span class="l">Excel 取込</span><span class="v">5,000<small>社</small></span><span class="d">1 回の取込で</span></div>
+    <div class="s"><span class="l">タグ・グループ配信</span><span class="v" style="font-size:clamp(18px,2vw,24px);padding-top:6px">自由自在</span><span class="d">に設定可能。御社の条件で</span></div>
+    <div class="s"><span class="l">送信元</span><span class="v" style="font-size:clamp(18px,2vw,22px);padding-top:6px">Outlook / Gmail</span><span class="d">本人のメールから送信</span></div>
+  </div>
+</div>
+
+<section class="gutter" id="custom">
+  <div class="inner">
+    <div class="sec-head center">
+      <p class="eyebrow">CUSTOMIZE</p>
+      <h2>御社の業務フローに合わせて、<span class="nw-d">メール配信の仕組みを作り込みます。</span></h2>
+      <p class="lead" style="margin-inline:auto">決まったサービスを売るのではなく、御社の「こうしたい」を聞いて、オーダーメイドで作ります。これまでに応えてきた要望と、その前後です。</p>
+    </div>
+    <div class="cases">
+      <div class="case rv">
+        <div class="ch">A 社の場合 <small>都内の売買仲介会社</small></div>
+        <div class="req"><span class="who">営業の方の要望</span>「PDF が 3MB までしか付けられない。10MB の物件概要書を、そのまま送りたい」</div>
+        <table>
+          <thead><tr><th>項目</th><th>以前<br>（メルマガ配信サービス）</th><th></th><th class="a">オーダーメール</th></tr></thead>
+          <tbody>
+            <tr><td>10MB の PDF を添付</td><td class="b">×<small>3MB まで</small></td><td class="ar">→</td><td class="a">○<small>10MB・合計 25MB</small></td></tr>
+            <tr><td>宛名「〇〇様」が入る</td><td class="b t">△<small>差し込み設定</small></td><td class="ar">→</td><td class="a">○</td></tr>
+            <tr><td>本人のアドレスから届く</td><td class="b">×</td><td class="ar">→</td><td class="a">○</td></tr>
+            <tr><td>送信済みが 1 社ずつ残る</td><td class="b">×</td><td class="ar">→</td><td class="a">○</td></tr>
+            <tr><td>顧客リストの登録し直し</td><td class="b">×<small>毎回必要</small></td><td class="ar">→</td><td class="a">○<small>Excel のまま</small></td></tr>
+          </tbody>
+        </table>
+        <div class="sum"><span>○ の数</span><span class="bef">0</span><span>→</span><b>5 / 5</b></div>
+      </div>
+      <div class="case rv">
+        <div class="ch">B 社の場合 <small>都内の売買仲介会社</small></div>
+        <div class="req"><span class="who">営業の方の要望</span>「価格帯・エリア・積算でタグを細かく分けたい。同じ相手に同じメールを 2 通送るのは絶対に避けたい」</div>
+        <table>
+          <thead><tr><th>項目</th><th>以前<br>（Excel とメールで手作業）</th><th></th><th class="a">オーダーメール</th></tr></thead>
+          <tbody>
+            <tr><td>条件でタグ分け<small>1億〜3億・千葉県・積算80%以上…</small></td><td class="b t">△<small>Excel の列で手作業</small></td><td class="ar">→</td><td class="a">○<small>タグで一発</small></td></tr>
+            <tr><td>同じ相手に 2 通送らない</td><td class="b">×<small>目で確認</small></td><td class="ar">→</td><td class="a">○<small>自動で排除</small></td></tr>
+            <tr><td>複数の条件に当たる会社も 1 通だけ</td><td class="b">×</td><td class="ar">→</td><td class="a">○</td></tr>
+            <tr><td>誰に何を送ったかの記録</td><td class="b t">△<small>自分で探す</small></td><td class="ar">→</td><td class="a">○</td></tr>
+            <tr><td>送り先の選び直し</td><td class="b">×<small>毎回作り直し</small></td><td class="ar">→</td><td class="a">○<small>チェックだけ</small></td></tr>
+          </tbody>
+        </table>
+        <div class="sum"><span>○ の数</span><span class="bef">0</span><span>→</span><b>5 / 5</b></div>
+      </div>
+      <div class="case ask rv">
+        <h3>御社の場合は？</h3>
+        <p>「こんなことはできる？」から始めてください。たとえば、</p>
+        <ul>
+          <li>「CRM の顧客リストを読み込みたい」</li>
+          <li>「送信結果を Excel で出したい」</li>
+          <li>「1 万件のメーリングリストに 10 分以内に配信したい」</li>
+          <li>「一言の案を AI に出してほしい」<small>対応済み</small></li>
+          <li>「Gmail でも送りたい」<small>対応済み</small></li>
+        </ul>
+        <a class="btn-main" href="#contact">要望を相談する <svg class="i" style="width:18px;height:18px"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="done-chips" aria-label="これまでに応えた要望">
+      <span><i>対応済み</i>PDF 10MB まで添付</span>
+      <span><i>対応済み</i>タグの細かな振り分けと重複排除</span>
+      <span><i>対応済み</i>Gmail 対応</span>
+      <span><i>対応済み</i>AI の一言提案</span>
+      <span class="ask"><i>ご相談</i>御社の要望</span>
+    </div>
+    <div class="cta-strip"><div class="cs"><div><b>御社の「こうしたい」を、まず聞かせてください。</b><span>要望の相談から、最短当日で利用開始できます。</span></div><div class="btns"><a class="btn-main" href="#contact">要望を相談する</a><a class="btn-sub" href="#contact">デモを依頼する</a></div></div></div>
+  </div>
+</section>
+
+<div class="dark-band gutter">
+  <div class="inner">
+    <p class="eyebrow">BEFORE / AFTER</p>
+    <h2>BCC の一斉送信、もうやめませんか。<br>届くメールが、こう変わりました。</h2>
+    <p class="lead">同じ物件、同じ本文、同じ添付。違うのは、受け取った担当者が「自分宛て」だと分かるかどうかです。</p>
+    <div class="ba2">
+      <div class="mailbox bad rv">
+        <div class="tag">いまの BCC 一斉送信 <small>受け取った側の画面</small></div>
+        <div class="mh"><span>差出人: <b>田中 太郎</b></span><span>宛先: <span class="warn">undisclosed-recipients（BCC 40 名）</span></span><span>件名: 物件のご紹介</span></div>
+        <div class="mb">
+          <p>各位</p>
+          <p>お世話になっております。表参道駅徒歩 6 分、延床 180 坪のオフィスビルのご紹介です。価格は 8.5 億円、現況満室稼働中です。</p>
+          <p>物件資料は下記よりダウンロードしてください。<br><a class="dl" href="#top" onclick="return false">https://dl.example.com/f/8f3a2c7e…（有効期限 7 日）</a></p>
+          <p class="sig">株式会社デモ不動産 売買仲介部 田中 太郎</p>
+        </div>
+        <ul class="verdict">
+          <li>宛名がない。「各位」で一斉送信だと分かる</li>
+          <li>その会社向けの一言が入れられない</li>
+          <li>資料は添付できず、ダウンロードリンク。開く手間があり、期限切れで開けないことも</li>
+          <li>自分の送信済みには 1 通しか残らない</li>
+        </ul>
+      </div>
+      <div class="arrow" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></div>
+      <div class="mailbox good rv">
+        <div class="tag">オーダーメール <small>40 社それぞれに、この形で届く</small></div>
+        <div class="mh"><span>差出人: <b>田中 太郎</b><span class="num" style="margin-left:8px">1</span>本人のメールから</span><span>宛先: <b>サンプル不動産002 高橋 様</b><span class="num" style="margin-left:8px">2</span>1 社 1 通</span><span>件名: 物件のご紹介</span></div>
+        <div class="mb">
+          <p><span class="nm">高橋 様</span><span class="num" style="margin-left:8px">3</span>宛名は自動</p>
+          <p>お世話になっております。</p>
+          <div class="hl">先日お伺いした条件に近いかと思い、ご連絡しました。<span class="num" style="margin-left:8px">4</span>この会社だけの一言</div>
+          <p>表参道駅徒歩 6 分、延床 180 坪のオフィスビルのご紹介です。価格は 8.5 億円、現況満室稼働中です。<span class="num" style="margin-left:8px">5</span>共通本文は全員同じ</p>
+          <p class="sig">株式会社デモ不動産 売買仲介部 田中 太郎</p>
+        </div>
+        <div class="att"><span>物件概要書.pdf</span><span>レントロール.xlsx</span><span>外観.jpg</span><span class="lbl"><span class="num" style="background:#1f3b63">6</span>大容量ファイルでも、PDF を直接添付</span></div>
+        <ul class="verdict">
+          <li>宛名と一言で、「自分宛て」と分かる</li>
+          <li>10MB の PDF もそのまま添付。10 ファイル・合計 25MB まで</li>
+          <li>送信済みフォルダに 40 社ぶん、1 通ずつ残る</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine-note">会社名・本文・添付は例です。宛名・あいさつと署名は設定に登録した文面が自動で入り、営業が書くのは共通本文と、添えたい会社への一言だけです。</p>
+    <div class="custom-note">上記のビフォーアフターはほんの一例です。個別の会社ごとに「欲しい機能」をカスタマイズして個別開発できます。<small>PDF の上限、タグの振り分け、重複の排除、Gmail 対応。これまでの要望は、すべてこの形で応えてきました。</small></div>
+    <div class="cta-strip" style="margin-top:22px"><div class="cs"><div><b>届くメールを、御社の名前で試してみませんか。</b><span>今の Excel とメールのまま。まずは自分宛てに 1 通。</span></div><div class="btns"><a class="btn-main" href="#contact">無料で試す</a><a class="btn-sub" href="#contact">デモを依頼する</a></div></div></div>
+  </div>
+</div>
+
+<section class="gutter" id="steps">
+  <div class="inner">
+    <div class="sec-head center">
+      <p class="eyebrow">HOW IT WORKS</p>
+      <h2>やることは 3 つ。<span class="nw-d">取り込む、絞って一言、送る。</span></h2>
+      <p class="lead" style="margin-inline:auto">月曜の朝、預かった物件の概要書が届いた。買主候補 40 社に、その日のうちに紹介したい。その手順が、この 3 つです。画面はすべて実際のアプリです。</p>
+    </div>
+    <div class="steps3">
+      <div class="step">
+        <span class="big" aria-hidden="true">1</span>
+        <span class="n">STEP 1</span>
+        <h3>Excel の顧客リストを取り込む</h3>
+        <p>手元の顧客管理 Excel をドラッグ。列の対応は画面で確かめ、次回からは覚えています。</p>
+        <div class="win only-d"><div class="bar"><i></i><i></i><i></i><span>顧客 › Excel 取込</span></div><img src="img/ui_import.png" alt="Excel 取込の画面。ファイルをドラッグして取り込む"></div>
+        <div class="pframe only-m"><img src="img/ui_m_import.png" alt="スマホで見た Excel 取込の画面"></div>
+      </div>
+      <div class="step">
+        <span class="big" aria-hidden="true">2</span>
+        <span class="n">STEP 2</span>
+        <h3>タグで絞り込み、送りたい送信先に一言</h3>
+        <p>絞り込んでチェック。一言を添えたい送信先の行にだけ書きます。</p>
+        <p>タグは自由自在に設定可能。貴社の業務フローに合わせて送信先の振り分けを行います。<br>「RC」「木造」「アパート」「区分」「土地」のほか、「1億〜3億」「積算80%以上」「千葉県」のような条件でも。</p>
+        <div class="win tall only-d"><div class="bar"><i></i><i></i><i></i><span>配信 › 宛先を選ぶ</span></div><img src="img/ui_recipients.png" alt="宛先を選ぶ画面。タグのチップで絞り込み、行ごとの欄に個別メッセージを書く"></div>
+        <div class="pframe only-m"><img src="img/ui_m_recipients.png" alt="スマホで見た宛先を選ぶ画面。タグのチップで絞り込み、表示中の会社をまとめてチェックする"></div>
+      </div>
+      <div class="step">
+        <span class="big" aria-hidden="true">3</span>
+        <span class="n">STEP 3</span>
+        <h3>本人のメールから 1 社ずつ送る</h3>
+        <p>送信結果は会社ごとに残り、失敗分だけ再試行。画面を閉じても送信は続きます。</p>
+        <div class="win only-d"><div class="bar"><i></i><i></i><i></i><span>配信 › 進捗</span></div><img src="img/ui_progress_head.png" alt="配信進捗の画面。送信済み・失敗・スキップの件数"><img src="img/ui_progress_rows.png" alt="会社ごとの送信結果と失敗の理由"></div>
+        <div class="pframe only-m"><img src="img/ui_m_progress.png" alt="スマホで見た配信進捗の画面。送信済み 29、失敗 2、スキップ 1 と会社ごとの結果"></div>
+      </div>
+    </div>
+    <div class="cta-strip"><div class="cs"><div><b>この 3 ステップを、御社の顧客リストで。</b><span>実際の画面でのデモも、問い合わせからご案内します。</span></div><div class="btns"><a class="btn-main" href="#contact">デモを依頼する</a><a class="btn-sub" href="#contact">無料で試す</a></div></div></div>
+  </div>
+</section>
+
+<div class="soft gutter" id="flow">
+  <div class="inner">
+    <div class="sec-head center">
+      <p class="eyebrow">ONBOARDING</p>
+      <h2>問い合わせから、<span class="nw-d">最短当日で利用開始できます。</span></h2>
+      <p class="lead" style="margin-inline:auto">会社側の作業は、お使いのメールとの連携を許可するだけです。</p>
+    </div>
+    <div class="onb">
+      <div class="o"><div class="n">1</div><h3>お問い合わせ</h3><p>下のフォームかメールでご連絡ください。その日のうちに、手順書と利用開始のご案内をお送りします。</p><span class="who">営業の方</span></div>
+      <div class="o"><div class="n">2</div><h3>お使いのメールとの連携を許可</h3><p>Outlook（Microsoft 365）か Gmail との連携を、案内した手順で一度だけ許可します。10 分ほどです。</p><span class="who">会社のメール管理者</span></div>
+      <div class="o"><div class="n">3</div><h3>Excel を取り込み、自分宛てに練習</h3><p>顧客リストを取り込み、自分のアドレス宛てに 1 通送って届き方を確かめます。</p><span class="who">営業の方</span></div>
+      <div class="o"><div class="n">4</div><h3>利用開始（最短当日）</h3><p>最初の配信からお使いいただけます。操作のご質問はメールで受け付けます。</p><span class="who">営業の方</span></div>
+    </div>
+    <div class="cta-strip"><div class="cs"><div><b>今日問い合わせて、今日から送る。</b><span>手順書と連携のご案内は、その日のうちにお送りします。</span></div><div class="btns"><a class="btn-main" href="#contact">無料で試す</a><a class="btn-sub" href="#contact">デモを依頼する</a></div></div></div>
+  </div>
+</div>
+
+<section class="gutter" id="fit">
+  <div class="inner">
+    <div class="sec-head">
+      <p class="eyebrow">FIT</p>
+      <h2>こんな会社に向いています</h2>
+    </div>
+    <div class="grid2">
+      <div><p class="k-label">向いている</p><ul class="checks">
+        <li>買主候補の顧客リストを Excel で管理し、Outlook や Gmail でメールを送っている売買仲介の営業</li>
+        <li>預かった物件を 10 社以上に紹介することが月に何度もある</li>
+        <li>「誰に何を送ったか」を営業ごとに残したい</li>
+      </ul></div>
+      <div><p class="k-label">向いていない</p><ul class="checks no">
+        <li>顧客リストを CRM で管理し、CRM からメールを送りたい会社</li>
+        <li>今の道具のままでよく、業務に合わせた作り込みを望まない会社</li>
+        <li>不特定多数へのメールマガジン</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="gutter" id="security">
+  <div class="inner">
+    <div class="sec-head center">
+      <p class="eyebrow">SECURITY</p>
+      <h2>お客様の顧客情報を、<span class="nw-d">預からない設計で守ります。</span></h2>
+      <p class="lead" style="margin-inline:auto">メールのパスワードは預からず、送信は本人のメールボックスから。保存するものは暗号化し、会社ごとに分離し、要らなくなったものは自動で消します。</p>
+    </div>
+    <div class="sec-grid">
+      <div class="card"><div class="icon"><svg class="i"><use href="#i-user"/></svg></div><h3>パスワードは預かりません</h3><p>Microsoft 365・Google の公式の連携（OAuth）だけを使い、メールのパスワードは一切保存しません。連携はいつでも解除でき、解除した瞬間に認証情報を削除します。</p></div>
+      <div class="card"><div class="icon"><svg class="i"><use href="#i-shield"/></svg></div><h3>保存するものは暗号化</h3><p>連携の認証情報は AES-256-GCM で暗号化して保存。通信はすべて TLS。ログインのセッションは署名つきで、7 日で自動的に失効します。</p></div>
+      <div class="card"><div class="icon"><svg class="i"><use href="#i-grid"/></svg></div><h3>会社ごとに完全分離</h3><p>顧客リストと配信の記録は、すべてのデータに会社の ID を付けて分離。配信は作った本人しか扱えず、営業ごとの「自分専用」の顧客は他の人に見えません。</p></div>
+      <div class="card"><div class="icon"><svg class="i"><use href="#i-clip"/></svg></div><h3>要らないものは自動で削除</h3><p>添付ファイルは 180 日で自動削除。取り込んだ元の Excel は、確定した時点で削除し、確定しなかったものも 24 時間で削除します。</p></div>
+      <div class="card"><div class="icon"><svg class="i"><use href="#i-list"/></svg></div><h3>変更も閲覧も、記録に残る</h3><p>顧客情報の変更は「誰が・いつ・何を・どう変えたか」を全件記録。運営側がお客様のデータを見るときも、目的と日時を記録します。</p></div>
+      <div class="card"><div class="icon"><svg class="i"><use href="#i-send"/></svg></div><h3>送信元は会社のメールのまま</h3><p>メールは本人のメールボックスから出るので、なりすましにならず、送信元の認証（SPF・DKIM）は会社のメールの設定がそのまま効きます。管理者は利用者を即時に停止できます。</p></div>
+    </div>
+    <div class="cta-strip"><div class="cs"><div><b>セキュリティの詳しい資料も、お送りします。</b><span>情報システム部門への説明用に、構成と保存するデータの一覧をまとめた資料をご用意しています。</span></div><div class="btns"><a class="btn-main" href="#contact">資料をもらう</a><a class="btn-sub" href="#contact">デモを依頼する</a></div></div></div>
+  </div>
+</section>
+
+<section class="gutter" id="faq">
+  <div class="inner">
+    <div class="sec-head">
+      <p class="eyebrow">FAQ</p>
+      <h2>よくいただく質問</h2>
+    </div>
+    <div class="faqs">
+      <details open><summary>BCC の一斉送信と何が違いますか</summary><p>BCC は 1 通のメールを全員に送るので、宛名が入らず、受け取る側には「一斉送信」と分かります。オーダーメールは会社ごとに別のメールを作り、宛名と一言を差し替えて 1 社ずつ送ります。送信済みフォルダにも 1 社ずつ残ります。</p></details>
+      <details><summary>うちの業務に合わせて変えてもらえますか</summary><p>はい。これまでも「PDF の上限を 10MB に広げる」「タグの振り分けを細かくして重複を排除する」「Gmail に対応する」といった要望に応えてきました。まずは「こんなことはできる？」をお聞かせください。</p></details>
+      <details><summary>タグは決まっていますか</summary><p>決まっていません。「RC」「木造」「アパート」「区分」「土地」のような種別も、「1億〜3億」「積算80%以上」「千葉県」のような条件も、御社の業務フローに合わせて自由自在に設定できます。Excel の列名がタグ名と同じなら、そのまま取り込みます。</p></details>
+      <details><summary>自分のメールアドレスから送られますか</summary><p>はい。Outlook（Microsoft 365）か Gmail のアカウントで連携し、本人のメールボックスから送ります。配信用の別のアドレスは要りません。返信もいつもの受信トレイに届きます。</p></details>
+      <details><summary>添付ファイルの上限はいくつですか</summary><p>1 ファイル 10MB、1 配信の合計 25MB、10 ファイルまでです。PDF・Excel（.xlsx）・CSV・PNG・JPG に対応しています。</p></details>
+      <details><summary>一度に何社まで送れますか</summary><p>宛先の数に上限はありません。送信はメールサービスの制限（1 分あたりの通数）に合わせたペースで進み、画面を閉じても続きます。進捗画面で 1 社ずつの結果を確認できます。</p></details>
+      <details><summary>Outlook と Gmail のどちらでも使えますか</summary><p>はい。Outlook（Microsoft 365）と Gmail（Google Workspace）に対応しています。ほかのメールもご相談ください。</p></details>
+      <details><summary>導入までにどのくらいかかりますか</summary><p>お問い合わせから最短当日です。お使いのメールとの連携を許可し（10 分ほど）、Excel の顧客リストを取り込めば、その日の配信から使えます。</p></details>
+      <details><summary>導入に必要なものは何ですか</summary><p>顧客リストの Excel（企業名・担当者・メールアドレス・タグ）と、Outlook か Gmail のアカウントです。パソコンへのインストールは不要で、Chrome か Edge で使います。初回はメールとの連携の許可が必要です。</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="gutter" id="contact">
+  <div class="inner">
+    <div class="cta-box">
+      <p class="eyebrow">CONTACT</p>
+      <h2>その物件紹介メール、<br>今の Excel とメールのまま、今日から。</h2>
+      <p>売買仲介の営業現場で、まずは自分宛てに 1 通。操作のご案内と、メール連携の手順書をお送りします。「こんなことはできる？」という要望も、この場で。</p>
+      <div class="addr"><code id="mail-addr">info@shikumi-co.jp</code><button type="button" id="copy-mail">コピー</button><span id="copied" class="cta-mail" hidden>コピーしました</span></div>
+      <p class="cta-mail">株式会社シクミ（東京都渋谷区）</p>
+    </div>
+    <form class="inq" id="inquiry" novalidate>
+      <div class="fh"><svg class="i"><use href="#i-mail"/></svg>無料で試す・資料をもらう</div>
+      <div class="fb">
+        <label for="f-company"><span>会社名<span class="req">必須</span></span><input id="f-company" name="company" type="text" autocomplete="organization" placeholder="〇〇不動産株式会社"></label>
+        <label for="f-name"><span>お名前<span class="req">必須</span></span><input id="f-name" name="name" type="text" autocomplete="name" placeholder="山田 太郎"></label>
+        <label for="f-email"><span>メールアドレス<span class="req">必須</span></span><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.co.jp"></label>
+        <label for="f-topic">ご相談の内容<select id="f-topic" name="topic"><option>無料で試したい</option><option>デモを見たい</option><option>資料（かんたんガイド・セキュリティ資料）がほしい</option><option>機能・料金について聞きたい</option><option>うちの業務に合わせた要望がある</option><option>メールの連携設定について聞きたい</option><option>その他</option></select></label>
+        <label for="f-body">ご相談内容<textarea id="f-body" name="body" placeholder="例: 営業 3 名で試験提供を試したい。顧客リストは Excel で約 800 社。価格帯とエリアでタグ分けしたい。"></textarea></label>
+        <button class="btn-main" type="submit">送信する</button>
+        <label class="hp" aria-hidden="true">ウェブサイト<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        <p class="fine">送信いただいた内容は、お問い合わせへの回答と資料の送付にだけ使います。<a href="https://shikumi-co.jp/privacy/">プライバシーポリシー</a></p>
+        <div class="sent-note" id="sent"></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="sticky-cta"><a class="btn-main" href="#contact">無料で試す</a><a class="btn-sub" href="#contact">デモを依頼</a></div>
+<div id="float-doc" role="complementary" aria-label="資料のご案内">
+  <span class="doc"><svg class="i"><use href="#i-doc"/></svg></span>
+  <span class="tx"><b>3 分で分かる資料</b>機能・導入の流れ・セキュリティ<a href="#contact">資料をもらう</a></span>
+  <button type="button" id="float-close" aria-label="閉じる">×</button>
+</div>
+<button type="button" id="to-top" aria-label="ページの先頭へ"><svg class="i"><use href="#i-up"/></svg></button>
+
+<footer class="site-foot gutter">
+  <div class="f-links"><a href="https://shikumi-co.jp/">株式会社シクミ</a><a href="https://rakuraku-mail.shikumi-co.jp/terms">利用規約</a><a href="https://rakuraku-mail.shikumi-co.jp/privacy">プライバシーポリシー</a></div>
+  <div class="f-co">
+    <p class="f-name">株式会社シクミ（shikumi inc.）</p>
+    <p>代表取締役　石井 由哉</p>
+    <p>東京都渋谷区桜丘町18-4 二宮ビル 1F</p>
+    <p>AI 導入支援（AI コンサルティング／AI 研修）・IT コンサルティング・システム開発・業務受託</p>
+    <p class="f-copy">© 2026 SHIKUMI INC.</p>
+  </div>
+</footer>
+
+
+
+<script>
+  (function () {
+    var $ = function (id) { return document.getElementById(id); };
+    function esc(x) { return String(x).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+    // 問い合わせフォーム: Apps Script のウェブアプリに送る（未接続のときはメールソフトを開く）
+    var FORM_ENDPOINT = ""; // 公開時に Apps Script のウェブアプリ URL を入れる（docs: オーダーメール 問い合わせフォームの接続手順）
+    var GUIDE_URL = "order-mail-guide.pdf"; // 「3 分で分かるオーダーメール」（同じフォルダに置く）
+    var guideLink = '<a href="' + GUIDE_URL + '" target="_blank" rel="noopener">資料「3 分で分かるオーダーメール」を開く（PDF）</a>';
+    function wireForm(f) {
+      f.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var data = {}; ["company", "name", "email", "topic", "body", "website"].forEach(function (k) { var el = f.querySelector('[name="' + k + '"]'); data[k] = el ? String(el.value || "").trim() : ""; });
+        var note = f.querySelector(".sent-note"), btn = f.querySelector('button[type="submit"]');
+        var missing = ["company", "name", "email"].filter(function (k) { return !data[k]; });
+        if (missing.length || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) { note.className = "sent-note show err"; note.textContent = "会社名・お名前・メールアドレスを入力してください。"; return; }
+        data.page = location.href;
+        var mailto = "mailto:info@shikumi-co.jp?subject=" + encodeURIComponent("オーダーメール お問い合わせ（" + data.topic + "）") + "&body=" + encodeURIComponent("会社名: " + data.company + "\nお名前: " + data.name + "\nメールアドレス: " + data.email + "\nご相談の内容: " + data.topic + "\n\n" + data.body + "\n");
+        if (!FORM_ENDPOINT) {
+          note.className = "sent-note show"; note.innerHTML = "メールソフトが開きます。内容を確認して送信してください。開かないときは info@shikumi-co.jp へお送りください。<br>" + guideLink;
+          location.href = mailto; return;
+        }
+        var orig = btn.textContent; btn.disabled = true; btn.textContent = "送信中…";
+        var done = function () { note.className = "sent-note show ok"; note.innerHTML = "ありがとうございます。担当からメールでご連絡します。<br>" + guideLink; btn.textContent = "送信しました"; Array.prototype.forEach.call(f.querySelectorAll("input, textarea, select"), function (el) { el.disabled = true; }); };
+        var fail = function () { btn.disabled = false; btn.textContent = orig; note.className = "sent-note show err"; note.innerHTML = '送信できませんでした。お手数ですが <a href="' + mailto + '">メールでご連絡ください</a>。'; };
+        var body = Object.keys(data).map(function (k) { return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]); }).join("&");
+        fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: body })
+          .then(function (r) { if (!r.ok) throw new Error("http " + r.status); return r.json().catch(function () { return { ok: true }; }); })
+          .then(function (j) { if (j && j.ok === false) fail(); else done(); })
+          .catch(fail);
+      });
+    }
+    Array.prototype.forEach.call(document.querySelectorAll("form.inq, form.inq-mini"), wireForm);
+    var btn = $("copy-mail"), addr = $("mail-addr"), copied = $("copied");
+    if (btn && addr) {
+      btn.addEventListener("click", function () {
+        var text = addr.textContent;
+        var done = function () { copied.hidden = false; setTimeout(function () { copied.hidden = true; }, 2000); };
+        var fallback = function () { var r = document.createRange(); r.selectNodeContents(addr); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback); else fallback();
+      });
+    }
+    // 1 画面目: 本人のメールから 1 社ずつ送られていく演出
+    var feed = $("feed"), pillN = $("pill-n"), pillL = $("pill-l"), pill = document.querySelector(".pill");
+    if (feed && pillN) {
+      var NAMES = ["伊藤 様", "高橋 様", "斎藤 様", "小林 様", "山田 様", "鈴木 様", "佐藤 様", "中村 様"];
+      var SUBS = ["宛名入り・一言つき", "本人のメールから", "送信済みに残る", "添付 3 件つき"];
+      var TOTAL = 40, n = 0;
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var mk = function (k) { var d = document.createElement("div"); d.className = "mcard"; d.innerHTML = '<span class="av"><svg class="i"><use href="#i-user"/></svg></span><span><b>' + esc(NAMES[k % NAMES.length]) + "</b><small>" + esc(SUBS[k % SUBS.length]) + '</small></span><span class="ok">送信済み</span>'; return d; };
+      var push = function (k) { feed.appendChild(mk(k)); while (feed.children.length > 3) feed.removeChild(feed.firstChild); };
+      if (reduce) { push(0); push(1); push(2); pillN.textContent = TOTAL + " / " + TOTAL; pillL.textContent = "送信完了"; pill.classList.add("done"); }
+      else {
+        var step = function () {
+          n += 1; push(n - 1); pillN.textContent = n + " / " + TOTAL;
+          if (n >= TOTAL) { pillL.textContent = "送信完了"; pill.classList.add("done"); setTimeout(function () { n = 0; feed.innerHTML = ""; pillL.textContent = "本人のメールから送信中"; pill.classList.remove("done"); step(); }, 3000); }
+          else setTimeout(step, n < 3 ? 700 : 900);
+        };
+        setTimeout(step, 600);
+      }
+    }
+    // スクロールで現れる
+    var rvs = document.querySelectorAll(".sec-head, .step, .feat, .card, .onb .o, .trial, .faqs, .cta-box, form.inq, .demo-win, .checks, .mailbox, .calc, .cmp-wrap");
+    Array.prototype.forEach.call(rvs, function (el) { el.classList.add("rv"); });
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) { entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }); }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+      Array.prototype.forEach.call(document.querySelectorAll(".rv"), function (el) { io.observe(el); });
+    } else { Array.prototype.forEach.call(document.querySelectorAll(".rv"), function (el) { el.classList.add("in"); }); }
+    var sweeping = false;
+    var sweep = function () {
+      if (sweeping) return; sweeping = true;
+      requestAnimationFrame(function () {
+        var limit = window.innerHeight;
+        Array.prototype.forEach.call(document.querySelectorAll(".rv:not(.in)"), function (el) { if (el.getBoundingClientRect().top < limit) el.classList.add("in"); });
+        sweeping = false;
+      });
+    };
+    window.addEventListener("scroll", sweep, { passive: true }); setTimeout(sweep, 400);
+    var fd = $("float-doc"), fdc = $("float-close");
+    if (fd && fdc) fdc.addEventListener("click", function () { fd.hidden = true; });
+    var tt = $("to-top");
+    if (tt) {
+      var onScroll = function () { tt.classList.toggle("show", window.scrollY > 600); };
+      window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+      tt.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+    }
+  })();
+</script>
+</body>
+</html>
