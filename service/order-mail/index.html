@@ -166,6 +166,44 @@
   @keyframes rise { from { transform: translateY(14px); opacity: 0; } to { transform: none; opacity: 1; } }
   @media (prefers-reduced-motion: reduce) { .env, .mcard, .pill .dot { animation: none; } .rv { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } .btn-main { transition: none; } }
 
+  /* B: hero form + sticky inquiry panel */
+  .hero-b .inner { grid-template-columns: minmax(0, 1fr) 400px; align-items: start; gap: 40px; padding-bottom: 24px; }
+  .stage-band { background: var(--soft); }
+  .stage-band .inner { max-width: 880px; padding: 0 0 36px; }
+  .feed-strip { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 2px 0 18px; }
+  .feed-strip .pill { position: static; }
+  .feed-strip .feed { position: static; width: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+  .feed-strip .mcard { width: 230px; }
+  .hero-form-wrap { position: sticky; top: 90px; }
+  .hero-form { background: var(--card); border: 1.5px solid var(--navy); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+  .hf-head { background: var(--navy); color: var(--on-navy); padding: 14px 20px; font-weight: 900; font-size: 17px; line-height: 1.4; }
+  .hf-head small { display: block; font-size: 12px; font-weight: 500; opacity: 0.85; margin-top: 3px; }
+  .hf-body { padding: 18px 20px 20px; display: grid; gap: 10px; }
+  .hf-body label { font-size: 13px; }
+  .hf-body input, .hf-body select { padding: 10px 12px; font-size: 14.5px; }
+  .hf-body .btn-main { padding: 14px; font-size: 16px; margin-top: 4px; }
+  .hf-body .fine { font-size: 11.5px; }
+  @media (max-width: 900px) { .hero-b .inner { grid-template-columns: 1fr; } .hero-form-wrap { position: static; } }
+  .fx { position: fixed; right: 20px; bottom: 20px; z-index: 16; width: 340px; max-width: calc(100vw - 32px); background: var(--card); border: 1.5px solid var(--navy); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; animation: rise 0.4s ease both; }
+  .fx[hidden] { display: none; }
+  .fx-head { background: var(--navy); color: #fff; font-weight: 900; font-size: 15px; padding: 10px 10px 10px 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .fx-head button { background: rgba(255, 255, 255, 0.15); border: 0; color: #fff; font-size: 18px; line-height: 1; width: 28px; height: 28px; border-radius: 50%; flex: none; }
+  .fx-body { padding: 12px 14px 14px; display: grid; gap: 8px; }
+  .fx-body label { font-size: 12.5px; gap: 3px; }
+  .fx-body input, .fx-body select { padding: 8px 10px; font-size: 14px; }
+  .fx-body .btn-main { padding: 11px; font-size: 15px; }
+  .fx-body .fine { font-size: 11px; }
+  .fx-tab { position: fixed; right: 20px; bottom: 20px; z-index: 16; background: var(--orange); color: #fff; border: 0; border-radius: 999px; padding: 13px 20px; font-weight: 900; font-size: 14.5px; display: flex; gap: 8px; align-items: center; box-shadow: 0 8px 22px rgba(255, 74, 0, 0.3); animation: rise 0.4s ease both; }
+  .fx-tab[hidden] { display: none; }
+  .fx-tab svg { width: 18px; height: 18px; }
+  #to-top { right: auto; left: 20px; bottom: 20px; }
+  @media (max-width: 820px) {
+    .fx { left: 0; right: 0; bottom: 0; width: auto; max-width: none; border-radius: 16px 16px 0 0; max-height: 86vh; overflow: auto; z-index: 17; }
+    .fx-tab { display: none !important; }
+    #to-top { left: auto; right: 14px; }
+    .sticky-cta button { flex: 1; justify-content: center; padding: 12px 10px; font-size: 14px; box-shadow: none; }
+  }
+
   /* stats band */
   .band { background: var(--bg); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .band .inner { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -558,7 +596,7 @@
   </div>
 </header>
 
-<section class="hero gutter" id="top">
+<section class="hero hero-b gutter" id="top">
   <div class="inner">
     <div>
       <span class="cat">不動産売買仲介向け オーダーメイドのメール配信</span>
@@ -580,10 +618,6 @@
         <li><span class="q">現状、二重送信がどうしても起こってしまうが、なくしたい</span><span class="ans"><span class="ar">→</span><span class="ok">可能です！</span></span></li>
       </ul>
       <p class="hero-made2">御社の「こうしたい」も、まずお聞かせください。</p>
-      <div class="btn-row">
-        <a class="btn-main" href="#contact">無料で試してみる <svg class="i" style="width:18px;height:18px"><use href="#i-arrow"/></svg></a>
-        <a class="btn-sub" href="#contact">資料をもらう</a>
-      </div>
       <ul class="checks3">
         <li><svg class="i"><use href="#i-check"/></svg>インストール不要</li>
         <li><svg class="i"><use href="#i-check"/></svg>Outlook・Gmail どちらも</li>
@@ -591,6 +625,26 @@
       </ul>
       <p class="trust">都内の不動産会社で試験提供中。クレジットカードの登録はありません。</p>
     </div>
+    <div class="hero-form-wrap">
+      <form class="hero-form inq-mini" id="hero-form" novalidate>
+        <div class="hf-head">無料で試す・資料をもらう<small>1 分で完了。送信後、担当からメールでご連絡します</small></div>
+        <div class="hf-body">
+          <label><span>会社名<span class="req">必須</span></span><input type="text" name="company" autocomplete="organization" placeholder="〇〇不動産株式会社"></label>
+          <label><span>お名前<span class="req">必須</span></span><input type="text" name="name" autocomplete="name" placeholder="山田 太郎"></label>
+          <label><span>メールアドレス<span class="req">必須</span></span><input type="email" name="email" autocomplete="email" placeholder="you@example.co.jp"></label>
+          <label><span>ご相談の内容</span><select name="topic"><option>無料で試したい</option><option>デモを見たい</option><option>資料がほしい</option><option>うちの業務に合わせた要望がある</option><option>その他</option></select></label>
+          <button class="btn-main" type="submit">送信する</button>
+          <label class="hp" aria-hidden="true">ウェブサイト<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          <p class="fine">お問い合わせへの回答と資料の送付にだけ使います。<a href="https://shikumi-co.jp/privacy/">プライバシーポリシー</a></p>
+          <div class="sent-note"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="stage-band gutter">
+  <div class="inner">
     <div class="stage" aria-label="宛先を選ぶ画面をノート PC に表示し、宛名入りのメールが 1 社ずつ送られていく図">
       <div class="laptop">
         <div class="screen"><img src="img/ui_recipients.png" alt="宛先を選ぶ画面。タグで絞り込み、会社ごとの行に個別メッセージを書く"></div>
@@ -604,7 +658,7 @@
       <div class="feed" id="feed" aria-hidden="true"></div>
     </div>
   </div>
-</section>
+</div>
 
 <div class="band gutter">
   <div class="inner">
@@ -865,12 +919,21 @@
   </div>
 </section>
 
-<div class="sticky-cta"><a class="btn-main" href="#contact">無料で試す</a><a class="btn-sub" href="#contact">デモを依頼</a></div>
-<div id="float-doc" role="complementary" aria-label="資料のご案内">
-  <span class="doc"><svg class="i"><use href="#i-doc"/></svg></span>
-  <span class="tx"><b>3 分で分かる資料</b>機能・導入の流れ・セキュリティ<a href="#contact">資料をもらう</a></span>
-  <button type="button" id="float-close" aria-label="閉じる">×</button>
+<div class="sticky-cta"><button class="btn-main" type="button" data-open-fx="無料で試したい">無料で試す</button><button class="btn-sub" type="button" data-open-fx="デモを見たい">デモを依頼</button></div>
+<div id="fx" class="fx" hidden role="complementary" aria-label="お問い合わせ">
+  <div class="fx-head">無料で試す・資料をもらう<button type="button" id="fx-min" aria-label="小さくする">−</button></div>
+  <form class="inq-mini fx-body" id="fx-form" novalidate>
+    <label><span>会社名<span class="req">必須</span></span><input type="text" name="company" autocomplete="organization" placeholder="〇〇不動産株式会社"></label>
+    <label><span>お名前<span class="req">必須</span></span><input type="text" name="name" autocomplete="name" placeholder="山田 太郎"></label>
+    <label><span>メールアドレス<span class="req">必須</span></span><input type="email" name="email" autocomplete="email" placeholder="you@example.co.jp"></label>
+    <label><span>ご相談の内容</span><select name="topic"><option>無料で試したい</option><option>デモを見たい</option><option>資料がほしい</option><option>うちの業務に合わせた要望がある</option><option>その他</option></select></label>
+    <button class="btn-main" type="submit">送信する</button>
+    <label class="hp" aria-hidden="true">ウェブサイト<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+    <p class="fine">お問い合わせへの回答と資料の送付にだけ使います。<a href="https://shikumi-co.jp/privacy/">プライバシーポリシー</a></p>
+    <div class="sent-note"></div>
+  </form>
 </div>
+<button type="button" id="fx-tab" class="fx-tab" hidden><svg class="i"><use href="#i-mail"/></svg>お問い合わせ</button>
 <button type="button" id="to-top" aria-label="ページの先頭へ"><svg class="i"><use href="#i-up"/></svg></button>
 
 <footer class="site-foot gutter">
@@ -964,6 +1027,27 @@
       });
     };
     window.addEventListener("scroll", sweep, { passive: true }); setTimeout(sweep, 400);
+    // B: 追従する問い合わせフォーム
+    var fx = $("fx"), fxTab = $("fx-tab"), fxMin = $("fx-min"), heroForm = $("hero-form"), fxMinimized = false, fxOpenMobile = false;
+    var isMobile = function () { return window.innerWidth <= 820; };
+    var fxUpdate = function () {
+      if (!fx || !heroForm) return;
+      var past = heroForm.getBoundingClientRect().bottom < 0;
+      if (isMobile()) { fx.hidden = !fxOpenMobile; fxTab.hidden = true; }
+      else { fx.hidden = !(past && !fxMinimized); fxTab.hidden = !(past && fxMinimized); }
+    };
+    if (fx) {
+      window.addEventListener("scroll", fxUpdate, { passive: true }); window.addEventListener("resize", fxUpdate); fxUpdate();
+      fxMin.addEventListener("click", function () { if (isMobile()) fxOpenMobile = false; else fxMinimized = true; fxUpdate(); });
+      fxTab.addEventListener("click", function () { fxMinimized = false; fxUpdate(); });
+      Array.prototype.forEach.call(document.querySelectorAll("[data-open-fx]"), function (btn) {
+        btn.addEventListener("click", function () {
+          var t = btn.getAttribute("data-open-fx"), sel = fx.querySelector("select"); if (t && sel) sel.value = t;
+          if (isMobile()) { fxOpenMobile = true; fxUpdate(); }
+          else { fxMinimized = false; fxUpdate(); if (fx.hidden) heroForm.scrollIntoView({ behavior: "smooth", block: "center" }); }
+        });
+      });
+    }
     var fd = $("float-doc"), fdc = $("float-close");
     if (fd && fdc) fdc.addEventListener("click", function () { fd.hidden = true; });
     var tt = $("to-top");
