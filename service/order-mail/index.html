@@ -975,10 +975,22 @@
         var done = function () { note.className = "sent-note show ok"; note.innerHTML = "ありがとうございます。担当からメールでご連絡します。<br>" + guideLink; btn.textContent = "送信しました"; Array.prototype.forEach.call(f.querySelectorAll("input, textarea, select"), function (el) { el.disabled = true; }); };
         var fail = function () { btn.disabled = false; btn.textContent = orig; note.className = "sent-note show err"; note.innerHTML = '送信できませんでした。お手数ですが <a href="' + mailto + '">メールでご連絡ください</a>。'; };
         var body = Object.keys(data).map(function (k) { return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]); }).join("&");
-        fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: body })
-          .then(function (r) { if (!r.ok) throw new Error("http " + r.status); return r.json().catch(function () { return { ok: true }; }); })
-          .then(function (j) { if (j && j.ok === false) fail(); else done(); })
-          .catch(fail);
+        // 1 回だけ送る（no-cors: 応答は読まないが、送信できたかは分かる）。送れなかったときだけ、隠しフォームで送り直す
+        var sendFetch = function () { return fetch(FORM_ENDPOINT, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: body }); };
+        var sendFrame = function () {
+          return new Promise(function (resolve, reject) {
+            var ifr = document.createElement("iframe"); ifr.name = "om_sink_" + Date.now(); ifr.setAttribute("aria-hidden", "true"); ifr.style.display = "none"; document.body.appendChild(ifr);
+            setTimeout(function () {
+              var hf = document.createElement("form"); hf.method = "POST"; hf.action = FORM_ENDPOINT; hf.target = ifr.name; hf.style.display = "none";
+              Object.keys(data).forEach(function (k) { var i = document.createElement("input"); i.type = "hidden"; i.name = k; i.value = data[k]; hf.appendChild(i); });
+              document.body.appendChild(hf);
+              var t = setTimeout(function () { reject(new Error("timeout")); }, 20000);
+              ifr.addEventListener("load", function () { clearTimeout(t); resolve(); });
+              hf.submit();
+            }, 60);
+          });
+        };
+        sendFetch().then(done).catch(function () { sendFrame().then(done).catch(fail); });
       });
     }
     Array.prototype.forEach.call(document.querySelectorAll("form.inq, form.inq-mini"), wireForm);
