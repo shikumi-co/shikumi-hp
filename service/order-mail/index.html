@@ -992,13 +992,15 @@
               var hf = document.createElement("form"); hf.method = "POST"; hf.action = FORM_ENDPOINT; hf.target = ifr.name; hf.style.display = "none";
               Object.keys(data).forEach(function (k) { var i = document.createElement("input"); i.type = "hidden"; i.name = k; i.value = data[k]; hf.appendChild(i); });
               document.body.appendChild(hf);
-              var t = setTimeout(function () { reject(new Error("timeout")); }, 20000);
+              var t = setTimeout(function () { reject(new Error("timeout")); }, 10000);
               ifr.addEventListener("load", function () { clearTimeout(t); resolve(); });
               hf.submit();
             }, 60);
           });
         };
-        sendFetch().then(done).catch(function () { sendFrame().then(done).catch(fail); });
+        // 応答を待ちすぎない: 8 秒たっても返ってこなければ、送信は届いているものとして完了表示にする（サーバー側の処理はそのまま続く）
+        var waitCap = function (p, ms) { return Promise.race([p, new Promise(function (resolve) { setTimeout(resolve, ms); })]); };
+        waitCap(sendFetch(), 8000).then(done).catch(function () { sendFrame().then(done).catch(fail); });
       });
     }
     Array.prototype.forEach.call(document.querySelectorAll("form.inq, form.inq-mini"), wireForm);
