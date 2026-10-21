@@ -628,11 +628,12 @@
     </div>
     <div class="hero-form-wrap">
       <form class="hero-form inq-mini" id="hero-form" novalidate>
-        <div class="hf-head">無料で試す・資料をもらう<small>1 分で完了。送信後、担当からメールでご連絡します</small></div>
+        <div class="hf-head">無料で試す・資料をもらう<small>1 分で完了。送信後、担当からメールかお電話でご連絡します</small></div>
         <div class="hf-body">
           <label><span>会社名<span class="req">必須</span></span><input type="text" name="company" autocomplete="organization" placeholder="〇〇不動産株式会社"></label>
           <label><span>お名前<span class="req">必須</span></span><input type="text" name="name" autocomplete="name" placeholder="山田 太郎"></label>
           <label><span>メールアドレス<span class="req">必須</span></span><input type="email" name="email" autocomplete="email" placeholder="you@example.co.jp"></label>
+          <label><span>電話番号<span class="req">必須</span></span><input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="0312345678（ハイフンなし）" maxlength="13"></label>
           <label><span>ご相談の内容</span><select name="topic"><option>無料で試したい</option><option>デモを見たい</option><option>資料がほしい</option><option>うちの業務に合わせた要望がある</option><option>その他</option></select></label>
           <button class="btn-main" type="submit">送信する</button>
           <label class="hp" aria-hidden="true">ウェブサイト<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
@@ -909,6 +910,7 @@
         <label for="f-company"><span>会社名<span class="req">必須</span></span><input id="f-company" name="company" type="text" autocomplete="organization" placeholder="〇〇不動産株式会社"></label>
         <label for="f-name"><span>お名前<span class="req">必須</span></span><input id="f-name" name="name" type="text" autocomplete="name" placeholder="山田 太郎"></label>
         <label for="f-email"><span>メールアドレス<span class="req">必須</span></span><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.co.jp"></label>
+      <label for="f-phone"><span>電話番号<span class="req">必須</span></span><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0312345678（ハイフンなし）" maxlength="13"></label>
         <label for="f-topic">ご相談の内容<select id="f-topic" name="topic"><option>無料で試したい</option><option>デモを見たい</option><option>資料（かんたんガイド・セキュリティ資料）がほしい</option><option>機能・料金について聞きたい</option><option>うちの業務に合わせた要望がある</option><option>メールの連携設定について聞きたい</option><option>その他</option></select></label>
         <label for="f-body">ご相談内容<textarea id="f-body" name="body" placeholder="例: 営業 3 名で試験提供を試したい。顧客リストは Excel で約 800 社。価格帯とエリアでタグ分けしたい。"></textarea></label>
         <button class="btn-main" type="submit">送信する</button>
@@ -927,6 +929,7 @@
     <label><span>会社名<span class="req">必須</span></span><input type="text" name="company" autocomplete="organization" placeholder="〇〇不動産株式会社"></label>
     <label><span>お名前<span class="req">必須</span></span><input type="text" name="name" autocomplete="name" placeholder="山田 太郎"></label>
     <label><span>メールアドレス<span class="req">必須</span></span><input type="email" name="email" autocomplete="email" placeholder="you@example.co.jp"></label>
+          <label><span>電話番号<span class="req">必須</span></span><input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="0312345678（ハイフンなし）" maxlength="13"></label>
     <label><span>ご相談の内容</span><select name="topic"><option>無料で試したい</option><option>デモを見たい</option><option>資料がほしい</option><option>うちの業務に合わせた要望がある</option><option>その他</option></select></label>
     <button class="btn-main" type="submit">送信する</button>
     <label class="hp" aria-hidden="true">ウェブサイト<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
@@ -962,12 +965,16 @@
     function wireForm(f) {
       f.addEventListener("submit", function (e) {
         e.preventDefault();
-        var data = {}; ["company", "name", "email", "topic", "body", "website"].forEach(function (k) { var el = f.querySelector('[name="' + k + '"]'); data[k] = el ? String(el.value || "").trim() : ""; });
+        var data = {}; ["company", "name", "email", "phone", "topic", "body", "website"].forEach(function (k) { var el = f.querySelector('[name="' + k + '"]'); data[k] = el ? String(el.value || "").trim() : ""; });
         var note = f.querySelector(".sent-note"), btn = f.querySelector('button[type="submit"]');
-        var missing = ["company", "name", "email"].filter(function (k) { return !data[k]; });
-        if (missing.length || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) { note.className = "sent-note show err"; note.textContent = "会社名・お名前・メールアドレスを入力してください。"; return; }
+        var missing = ["company", "name", "email", "phone"].filter(function (k) { return !data[k]; });
+        if (missing.length || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) { note.className = "sent-note show err"; note.textContent = "会社名・お名前・メールアドレス・電話番号を入力してください。"; return; }
+        // 電話番号: 全角→半角、ハイフン・空白を除き、0 で始まる 10〜11 桁。00 で始まる番号や同じ数字の並び（0000000000 など）は受け付けない
+        var digits = data.phone.replace(/[０-９]/g, function (c) { return String.fromCharCode(c.charCodeAt(0) - 0xFEE0); }).replace(/[^0-9]/g, "");
+        if (!/^0[1-9][0-9]{8,9}$/.test(digits) || /^(\d)\1+$/.test(digits)) { note.className = "sent-note show err"; note.textContent = "電話番号は市外局番からハイフンなしで 10〜11 桁で入力してください（例: 0312345678）。"; f.querySelector('[name="phone"]').focus(); return; }
+        data.phone = digits;
         data.page = location.href;
-        var mailto = "mailto:info@shikumi-co.jp?subject=" + encodeURIComponent("オーダーメール お問い合わせ（" + data.topic + "）") + "&body=" + encodeURIComponent("会社名: " + data.company + "\nお名前: " + data.name + "\nメールアドレス: " + data.email + "\nご相談の内容: " + data.topic + "\n\n" + data.body + "\n");
+        var mailto = "mailto:info@shikumi-co.jp?subject=" + encodeURIComponent("オーダーメール お問い合わせ（" + data.topic + "）") + "&body=" + encodeURIComponent("会社名: " + data.company + "\nお名前: " + data.name + "\nメールアドレス: " + data.email + "\n電話番号: " + data.phone + "\nご相談の内容: " + data.topic + "\n\n" + data.body + "\n");
         if (!FORM_ENDPOINT) {
           note.className = "sent-note show"; note.innerHTML = "メールソフトが開きます。内容を確認して送信してください。開かないときは info@shikumi-co.jp へお送りください。<br>" + guideLink;
           location.href = mailto; return;
